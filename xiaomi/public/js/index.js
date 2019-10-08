@@ -1,3 +1,5 @@
+
+
 // 显示隐藏
 $('.siteCategoryOne>ul>li').hover(function(){
     $('.siteCategoryTwo').show();
@@ -57,7 +59,6 @@ smallpoints.on('click',function(){
         }
         $(swiperWrapperimg[index]).fadeIn('slow').siblings('.swiperWrapper').fadeOut('fast');
         $(smallpoints[index]).addClass('smallShow').siblings().removeClass('smallShow')
-        console.log(status)
     },4000) 
 //移入停止！！！
 swiperWrapperimg.mouseover(function(){
@@ -91,4 +92,23 @@ $('#search').blur(function(){
     $('#search').css({borderColor:'rgb(224, 224, 224)'});
     $('.search_btn').css({borderColor:'rgb(224, 224, 224)'});
     $('.search_hot_words').show();
+})
+
+
+//数据渲染
+$.ajax({
+  type:'get',
+  url:'/123',
+  success:function(res){
+      console.log(res[0].img1)
+      for(let i=0;i<8;i++){
+        $('.brick-item-m-2 img').eq(i).attr({src:res[i].img1})
+        $('.title1').eq(i).text(res[i].PName)
+        $('.brick-item-m-2 span').eq(i).text(res[i].ShoppPrice)
+        $('.brick-item-m-2 del').eq(i).text(res[i].CostpPrice)
+        $('.brick-item-m-2 .desc').eq(i).text(res[i].details)
+        console.log(res[i].ShoppPrice)
+      }
+      console.log(res[0].PName)
+  }
 })
