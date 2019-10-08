@@ -107,8 +107,6 @@ $.ajax({
         $('.brick-item-m-2 span').eq(i).text(res[i].ShoppPrice)
         $('.brick-item-m-2 del').eq(i).text(res[i].CostpPrice)
         $('.brick-item-m-2 .desc').eq(i).text(res[i].details)
-        console.log(res[i].ShoppPrice)
       }
-      console.log(res[0].PName)
   }
 })
