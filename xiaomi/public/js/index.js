@@ -1,7 +1,3 @@
-
-
-
-
 // 显示隐藏
 $('.siteCategoryOne>ul>li').hover(function(){
     $('.siteCategoryTwo').show();
