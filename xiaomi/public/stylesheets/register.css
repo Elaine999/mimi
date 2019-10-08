@@ -24,8 +24,7 @@ body {
 }
 .content form .formBox {
   width: 332px;
-  height: 306px;
-  margin: 40px auto;
+  margin: 30px auto;
 }
 .content form .formBox input {
   width: 332px;
@@ -35,14 +34,15 @@ body {
   padding: 10px;
 }
 .content form .formBox .eMail,
-.content form .formBox .code {
+.content form .formBox .code,
+.content form .formBox .regPwd {
   height: 20px;
   border: 1px solid #e8e8e8;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 .content form .formBox .subBtn {
   width: 352px;
-  margin: 15px 0;
+  margin: 10px 0 20px;
   background-color: #ff6700;
   color: #fff;
 }
