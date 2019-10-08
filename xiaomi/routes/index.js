@@ -14,4 +14,20 @@ router.get('/123',function(req,res){
     res.send(data);
   })
 })
+
+router.get('/details',function(req,res){
+  let pid = req.query.pid;
+  let sqlarr = [];
+  console.log(pid);
+  // res.send(pid)
+  let sql='SELECT * FROM productsinfo JOIN imglist ON productsinfo.PID=imglist.PID WHERE productsinfo.PID=?';
+  sqlarr.push(pid)
+  db.dbConnect(sql,sqlarr,function(err,data){
+    console.log(data);
+    
+    res.render('details.ejs',{data})
+    
+  })
+
+})
 module.exports = router;
