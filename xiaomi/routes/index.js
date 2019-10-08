@@ -28,7 +28,7 @@ router.get('/details',function(req,res){
     res.render('details.ejs',{data})
     
   })
-
+})
 router.post("/reg.jsp", function (req, res, next) {
   let Email = req.body.eMail
   let Password = req.body.regPwd
