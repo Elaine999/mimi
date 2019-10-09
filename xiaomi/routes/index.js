@@ -5,7 +5,7 @@ var db=require('./../utils/db.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express',loginState:null});
+  res.render('index', { title: 'Express',loginState:123,username:345});
 });
 
 router.get('/123',function(req,res){
@@ -29,13 +29,8 @@ router.get('/details',function(req,res){
     
   })
 })
-router.post("/reg.jsp", function (req, res, next) {
-  let Email = req.body.eMail
-  let Password = req.body.regPwd
-  let sql = "INSERT INTO userdetails(Email,Password) VALUES(?,?)"
-  let sqlARR = [Email,Password]
-  console.log(sqlARR);
 
+<<<<<<< HEAD
   db.dbConnect(sql, sqlARR, function (err, data) {
     if (err) {
       res.send("注册失败请检查")
@@ -43,5 +38,34 @@ router.post("/reg.jsp", function (req, res, next) {
       res.send("注册成功")
     }
   })
+=======
+
+
+router.post('/login.jsp',function(req,res,next){
+  let uersid = req.body.user;
+  let password = req.body.password;
+  let sql = 'select * from userdetails where Email=? and Password=? '
+  let sqlArr = [uersid,password];
+  console.log(uersid,password,999);
+  db.dbConnect(sql,sqlArr,function(err,data){
+    if(err){
+      res.send(err);
+    }
+    console.log(data);
+    console.log(req.session);
+    if (data.length>0) {
+      req.session.loginState = uersid;
+      res.send(data);
+      
+    }else{
+      res.send('登录失败')
+    }
+  })
+
+})
+router.post('/logout.jsp',function(req,res,next){
+  req.session.loginState = null;
+  res.render('index.html')//退出接口还不知道可以不
+>>>>>>> 2a79bf53987082c20cd75d76f370c25613fe644c
 })
 module.exports = router;
