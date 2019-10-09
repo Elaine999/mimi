@@ -117,6 +117,7 @@ $('#swiper_controls_prev').on('click',function(){
     if(indexTwo<=0){
         indexTwo=0;
         $('#swiper_controls_prev i').css({color:'#e0e0e0'})
+        $('#swiper_controls_next i').css({color:'#b0b0b0'})
     }else{
         $('#swiper_controls_prev i').css({color:'#b0b0b0'})
     }
@@ -127,6 +128,7 @@ $('#swiper_controls_next').on('click',function(){
     indexTwo++;
     if(indexTwo>=2){
         indexTwo=2;
+        $('#swiper_controls_prev i').css({color:'#b0b0b0'})
         $('#swiper_controls_next i').css({color:'#e0e0e0'})
     }else{
         $('#swiper_controls_next i').css({color:'#b0b0b0'})
