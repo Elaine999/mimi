@@ -100,7 +100,7 @@ $.ajax({
   type:'get',
   url:'/123',
   success:function(res){
-      console.log(res[0].img1)
+      console.log(res)
       for(let i=0;i<8;i++){
         $('.brick-item-m-2 img').eq(i).attr({src:res[i].img1})
         $('.title1').eq(i).text(res[i].PName)
