@@ -41,11 +41,11 @@
     <p>简体| 繁体| English |常见问题</p>
     <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
   </footer>
-  <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <script>
     $('#tolog').on('click',function(){
       $.ajax({
-        url:'/login.jsp',
+        url:'login/login.jsp',
         type:'post',
         data:$('#getinfoform').serialize(),
         success:function(res){
