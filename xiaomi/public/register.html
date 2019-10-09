@@ -13,7 +13,7 @@
     <div class="content">
         <a class="regHeader" href="index.html"></a>
         <h1>注册小米帐号</h1>
-        <form action="/reg/reg.jsp" method="POST" name="regTable">
+        <form action="/reg/reg.jsp" method="POST" name="regTable" class="formBox">
             <div class="formBox">
                 请输入邮箱<br>
                 <input class="eMail" type="email" name="eMail"><br>
@@ -49,7 +49,16 @@
                 }
             })
         })
-       
+        $('.subBtn').on('click', function () {
+      $.ajax({
+        url: '/reg/reg.jsp',
+        type: 'post',
+        data: $('.formBox').serialize(),
+        success: function (res) {
+          window.location.href = 'http://127.0.0.1:3000/login.html'
+        }
+      })
+    })
     </script>
 </body>
 

@@ -12,8 +12,8 @@ router.post("/reg.jsp", function (req, res, next) {
     let pwd = req.body.regPwd
     let codes = req.body.code
     // 插入
-    let sql = "INSERT INTO useraccount(email,pwd) VALUES(?,?)"
-    let sqlARR = [Email, pwd]
+    let sql = "INSERT INTO useraccount(email,pwd,UserName) VALUES(?,?,?)"
+    let sqlARR = [Email, pwd,Email]
 
     // 查询
     let sql2 = "SELECT * FROM verCode WHERE email=? AND codes=?"
