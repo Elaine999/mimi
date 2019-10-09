@@ -40,10 +40,10 @@ smallpoints.on('click',function(){
         $(smallpoints[index]).addClass('smallShow').siblings().removeClass('smallShow')
     },3000)
 //移入停止！！！
-swiperWrapperimg.mouseenter(function(){
+swiperWrapperimg.mouseover(function(){
     window.clearInterval(timeId);
 })
-swiperWrapperimg.mouseleave(function(){
+swiperWrapperimg.mouseout(function(){
     var timeId=setInterval(function(){
         index++;
         if(index>len-1){

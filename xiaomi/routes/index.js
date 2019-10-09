@@ -5,11 +5,11 @@ var db=require('./../utils/db.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express',loginState:123,username:345});
+  res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid});
 });
 
 router.get('/123',function(req,res){
-  let sql='select * from productsinfo left join imglist on productsinfo.PID  = imglist.PID where productsinfo.CategoryID=1';
+  let sql='select * from productsinfo left join imglist on productsinfo.PID  = imglist.PID';
   db.dbConnect(sql,[],function(err,data){
     res.send(data);
   })
@@ -20,12 +20,12 @@ router.get('/details',function(req,res){
   let sqlarr = [];
   console.log(pid);
   // res.send(pid)
-  let sql='SELECT * FROM productsinfo JOIN imglist ON productsinfo.PID=imglist.PID WHERE productsinfo.PID=?';
+  let sql='  select * from (productsinfo left join imglist on productsinfo.PID  = imglist.PID)left join vers_pric on vers_pric.PID=imglist.PID WHERE productsinfo.PID=?';
   sqlarr.push(pid)
   db.dbConnect(sql,sqlarr,function(err,data){
-    console.log(data);
+    // console.log(data);
     
-    res.render('details.ejs',{data})
+    res.render('details.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
     
   })
 })
