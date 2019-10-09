@@ -6,171 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+    <link rel="stylesheet" href="stylesheets/head.css">
     <title>小米官网</title>
 </head>
 
 <body>
-    <!-- 第一块 -->
-    <div class="siteTopbar">
-        <div class="container">
-            <div class="topbarNav">
-                <a href="/">小米商城</a>
-                <span>|</span>
-                <a href="">MIUI</a>
-                <span>|</span>
-                <a href="">IoT</a>
-                <span>|</span>
-                <a href="">云服务</a>
-                <span>|</span>
-                <a href="">金融</a>
-                <span>|</span>
-                <a href="">有品</a>
-                <span>|</span>
-                <a href="">小爱开放平台</a>
-                <span>|</span>
-                <a href="">企业团购</a>
-                <span>|</span>
-                <a href="">资质证照</a>
-                <span>|</span>
-                <a href="">协议规则</a>
-                <span>|</span>
-                <a href="">下载app</a>
-                <span>|</span>
-                <a href="">Select Location</a>
-            </div>
-            <div class="topbarCart">
-                <a href="">
-                    <em class="iconfont">&#xe509;</em>
-                    购物车
-                    <!-- 数据渲染 -->
-                    <span>（0）</span>
-                </a>
-                <div class="J_miniCartMenu">
-                    <div class="menu_content">
-                        <div class="msg_empty">购物车中还没有商品，赶紧选购吧！</div>
-                    </div>
-                </div>
-            </div>
-            <div class="topbarInfo">
-                <%if(loginState){%>
-                    <a href="PersonalCenter.html"><%=username%></a>
-                    <span>|</span>
-                    <a href="" id="logout">退出</a>
-                <%}else{%>
-                <a href="login.html">登录</a>
-                <span>|</span>
-                <a href="register.html">注册</a>
-                <%}%>
-                <span>|</span>
-                <a href="">消息通知</a>
-            </div>
-        </div>
-    </div>
-    <!-- 第二块 -->
-    <div class="siteHeader">
-        <div class="container">
-            <div class="headerLogo">
-                <a href="/"></a>
-            </div>
-            <div class="headerNav">
-                <ul class="navList">
-                    <li class="navCategory"></li>
-                    <li>
-                        <a href="">小米手机</a>
-                    </li>
-                    <li>
-                        <a href="">Redmi 红米</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">笔记本</a>
-                        
-                    </li>
-                    <li>
-                        <a href="">家电</a>
-                    </li>
-                    <li>
-                        <a href="">路由器</a>  
-                    </li>
-                    <li>
-                        <a href="">智能硬件</a>   
-                    </li>
-                    <li>
-                        <a href="">服务</a>   
-                    </li>
-                    <li>
-                        <a href="">社区</a>  
-                    </li>
-                </ul>
-            </div>
-            <div class="headerSearch">
-                <form action="//search.mi.com/search" method="get">
-                    <input type="text" id="text">
-                    <input type="submit" class="search_btn iconfont" value="&#xe637">
-                    <div class="search_hot_words">
-                        <a href="">小米9 Pro 5G</a>
-                        <a href="">Redmi Note 8</a>
-                    </div>
-                    <div class="J_keywordList">
-                        <ul class="result-list">
-                           <li>
-                               <a href="">
-                                   <span>小米9</span>
-                               </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>Redmi K20 pro</span>
-                            </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>Redmi K20</span>
-                            </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>Redmi Note 7 Pro</span>
-                            </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>小米电视4c</span>
-                            </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>电视32英寸</span>
-                            </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>笔记本pro</span>
-                            </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>小爱音箱</span>
-                            </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>净水器</span>
-                            </a>
-                           </li>
-                           <li>
-                            <a href="">
-                                <span>Redmi note 7</span>
-                            </a>
-                           </li>
-                        </ul>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- 第一二块 用的是公共模块 -->
+    <%include template/header.ejs %>
+    
     <!-- 第三块 -->
     <div class="main">
         <div class="homeSub">
@@ -1613,6 +1457,7 @@
             </div>
         </div>
     </div>
+    <%include template/footer.ejs %>
     <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
     <script src="js/index.js"></script>
 </body>
