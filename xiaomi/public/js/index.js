@@ -84,13 +84,13 @@ swiperWrapperimg.mouseout(function(){
 new move();
 
 //搜索框
-$('#search').focus(function(){
-    $('#search').css({borderColor:'#ff7600'});
+$('#text').focus(function(){
+    $('#text').css({borderColor:'#ff7600'});
     $('.search_btn').css({borderColor:'#ff7600'});
     $('.search_hot_words').hide();
 })
-$('#search').blur(function(){
-    $('#search').css({borderColor:'rgb(224, 224, 224)'});
+$('#text').blur(function(){
+    $('#text').css({borderColor:'rgb(224, 224, 224)'});
     $('.search_btn').css({borderColor:'rgb(224, 224, 224)'});
     $('.search_hot_words').show();
 })
