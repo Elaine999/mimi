@@ -1,5 +1,5 @@
 var indexTwo=0;//小米闪购索引
-var izero=-1,ione=-1,itwo=-1,ithree=-1;
+var izero=-1,ione=-1,itwo=-1,ithree=-1,ifour=-1,ifive=-1;
 
 // 显示隐藏
 $('.siteCategoryOne>ul>li').hover(function(){
@@ -130,13 +130,16 @@ $.ajax({
           switch(res[i].CategoryID){
               case 0:izero++;a(res[i],0,izero); break;
               case 1:ione++;a(res[i],1,ione); break;
+              case 2:itwo++;a(res[i],2,itwo); break;
+              case 3:ithree++;a(res[i],3,ithree); break;
+              case 4:ifour++;a(res[i],4,ifour); break;
+              case 5:ifive++;a(res[i],5,ifive); break;
           }
                 
   }
 }
 })
 function a(item,j,id){
-    
     $(`.brick-item-m-${j} a`).eq(id).attr({href:`localhost:3000/details?PID=${item.PID}`})
     $(`.brick-item-m-${j} img`).eq(id).attr({src:item.img1,alt:item.Title})
     $(`.brick-item-m-${j} .title`).eq(id).text(item.PName)
