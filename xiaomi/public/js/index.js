@@ -127,6 +127,7 @@ $.ajax({
   success:function(res){
       console.log(res)
       for(let i=0;i<8;i++){
+        $('.brick-item-m-2 a').eq(i).attr({href:`localhost:3000/details?PID=${res[i].PID}`})
         $('.brick-item-m-2 img').eq(i).attr({src:res[i].img1})
         $('.title1').eq(i).text(res[i].PName)
         $('.brick-item-m-2 span').eq(i).text(res[i].ShoppPrice)
