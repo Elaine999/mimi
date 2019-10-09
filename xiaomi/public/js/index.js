@@ -1,4 +1,4 @@
-
+var indexTwo=0;//小米闪购索引
 
 // 显示隐藏
 $('.siteCategoryOne>ul>li').hover(function(){
@@ -95,6 +95,31 @@ $('#search').blur(function(){
 })
 
 
+//小米闪购轮播
+
+$('#swiper_controls_prev').on('click',function(){
+    indexTwo--;
+    if(indexTwo<=0){
+        indexTwo=0;
+        $('#swiper_controls_prev i').css({color:'#e0e0e0'})
+    }else{
+        $('#swiper_controls_prev i').css({color:'#b0b0b0'})
+    }
+  $('.swiper_wrapper').css({transform:`translateX(-${992*indexTwo}px)`});
+})
+
+$('#swiper_controls_next').on('click',function(){
+    indexTwo++;
+    if(indexTwo>=2){
+        indexTwo=2;
+        $('#swiper_controls_next i').css({color:'#e0e0e0'})
+    }else{
+        $('#swiper_controls_next i').css({color:'#b0b0b0'})
+    }
+  $('.swiper_wrapper').css({transform:`translateX(-${992*indexTwo}px)`});
+})
+
+
 //数据渲染
 $.ajax({
   type:'get',
@@ -102,6 +127,7 @@ $.ajax({
   success:function(res){
       console.log(res)
       for(let i=0;i<8;i++){
+        $('.brick-item-m-2 a').eq(i).attr({href:`localhost:3000/details?PID=${res[i].PID}`})
         $('.brick-item-m-2 img').eq(i).attr({src:res[i].img1})
         $('.title1').eq(i).text(res[i].PName)
         $('.brick-item-m-2 span').eq(i).text(res[i].ShoppPrice)

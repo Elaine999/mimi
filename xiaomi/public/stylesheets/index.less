@@ -477,10 +477,37 @@ body{
             .box_hd{
                 width:1226px;
                 height:58px;
+                position:relative;
                 .title{
                     line-height:58px;
                     font-weight:200;
                     font-size:22px;
+                }
+                .swiper_controls{
+                    font-size:0px;
+                    width:72px;
+                    height:25px;
+                    position:absolute;
+                    right:0;
+                    top:24px;
+                    span{
+                        display:inline-block;
+                        width:36px;
+                        height:24px;
+                        padding:3px 5px;
+                        width:24px;
+                        height:16px;
+                        cursor:pointer;
+                        border:1px solid rgb(224, 224, 224);
+                        text-align:center;
+                        line-height:16px;
+                        i{
+                            color:#b0b0b0;
+                        }
+                        &:hover i{
+                            color:#ff6700;
+                        }
+                    }
                 }
             }
             .box_bd{
@@ -544,7 +571,8 @@ body{
                     overflow:hidden;
                     .swiper_wrapper{
                         height:340px;
-                        width:1984px;
+                        width:2976px;
+                        transition:all 1s;
                         li{
                             background:#fff;
                             width:234px;
