@@ -51,8 +51,27 @@
         success: function (res) {
           if (res.stateCode) {
             window.location.href = 'http://127.0.0.1:3000/'
-          }else{
-            alert('登录失败')
+          } else {
+            let prizeBox = document.createElement("div")
+            $(prizeBox).css({
+              width: " 300px",
+              height: "100px",
+              background: "rgba(101, 101, 102, 0.4)",
+              color: "#fff",
+              fontSize: "20px",
+              textAlign: "center",
+              lineHeight: "100px",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: " translate(-50%, -50%)"
+            }
+            )
+            prizeBox.innerText = `登录失败,请检查`
+            document.body.appendChild(prizeBox)
+            prizeBox.onclick = function () {
+              document.body.removeChild(prizeBox)
+            }
           }
         }
       })

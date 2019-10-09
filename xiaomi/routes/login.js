@@ -24,11 +24,11 @@ router.post('/login.jsp', function (req, res, next) {
 
 })
 router.post('/logout.jsp', function (req, res, next) {
-    req.session.loginState = uersid;
-    req.session.username = data[0].UserName;
-    req.session.uid = data[0].uid;
+    req.session.loginState = null;
+    req.session.username = null;
+    req.session.uid = null;
     console.log(123);
-    res.render('index') //退出接口还不知道可以不
+    res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid}); //退出接口还不知道可以不
 })
 
 module.exports = router;
