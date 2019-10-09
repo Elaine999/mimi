@@ -34,7 +34,7 @@ router.post("/reg.jsp", function (req, res, next) {
 
         } else {
             console.log("注册失败请检查");
-            res.send("注册失败请检查")
+            res.send({sta:false})
 
         }
     })
