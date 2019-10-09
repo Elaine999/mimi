@@ -45,7 +45,7 @@
   <script>
     $('#tolog').on('click',function(){
       $.ajax({
-        url:'/login.jsp',
+        url:'login/login.jsp',
         type:'post',
         data:$('#getinfoform').serialize(),
         success:function(res){
