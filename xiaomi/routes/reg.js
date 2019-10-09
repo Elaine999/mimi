@@ -19,7 +19,6 @@ router.post("/reg.jsp", function (req, res, next) {
     })
   })
   
-  
   router.post("/register.html/getcode.php", function (req, res, next) {
    console.log(req.body.Code);
    
