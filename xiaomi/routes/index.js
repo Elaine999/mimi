@@ -5,11 +5,7 @@ var db=require('./../utils/db.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-<<<<<<< HEAD
   res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid});
-=======
-  res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid});
->>>>>>> 50eb0ce6f4ae21626acd250888b602c4b7340f7d
 });
 
 router.get('/123',function(req,res){
