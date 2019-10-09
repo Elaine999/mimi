@@ -13,7 +13,7 @@
     <div class="content">
         <a class="regHeader" href="index.html"></a>
         <h1>注册小米帐号</h1>
-        <form action="/reg/reg.jsp" method="POST" name="regTable">
+        <form action="/reg/reg.jsp" method="POST" name="regTable" class="formBox">
             <div class="formBox">
                 请输入邮箱<br>
                 <input class="eMail" type="email" name="eMail"><br>
@@ -21,7 +21,7 @@
                 <input class="regPwd" type="password" name="regPwd"><br>
                 请输入验证码<br>
                 <input type="text" class="code" name="code"><button type="button" class="codeBtn">获取验证码</button><br>
-                <input class="subBtn" type="submit" value="立即注册">
+                <input class="subBtn" type="button" value="立即注册">
             </div>
         </form>
         <p>已阅读并同意：小米 <b>用户协议</b> 和 <b>隐私政策</b> </p>
@@ -32,21 +32,59 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script>
-        let code=$('.code')
+        let code = $('.code')
+        let eMail = $(".eMail")
         $('.codeBtn').on('click', function () {
+            console.log(111);
             $.ajax({
-                url: '/register.html/getcode.php',
+                url: '/reg/getcode.php',
                 type: 'POST',
-                data:{
-                   Code: code.val()},
-                success(res){
-                    data=res
-                    console.log(res);
+                data: {
+                    Code: code.val(),
+                    eMails: eMail.val()
+                },
+                success(res) {
+                    data = res
 
                 }
             })
         })
-       
+        $('.subBtn').on('click', function () {
+            $.ajax({
+                url: '/reg/reg.jsp',
+                type: 'post',
+                data: $('.formBox').serialize(),
+                success: function (res) {
+                    console.log(res.sta);
+
+                    if (res.sta != false) {
+                        window.location.href = 'http://127.0.0.1:3000/login.html'
+                    }
+                    else {
+                        let prizeBox = document.createElement("div")
+                        $(prizeBox).css({
+                            width: " 300px",
+                            height: "100px",
+                            background: "rgba(101, 101, 102, 0.4)",
+                            color: "#fff",
+                            fontSize: "20px",
+                            textAlign: "center",
+                            lineHeight: "100px",
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform:" translate(-50%, -50%)"
+                        }
+                        )
+                        prizeBox.innerText = `验证码错误，请检查`
+                        document.body.appendChild(prizeBox)
+                        prizeBox.onclick = function () {
+                            document.body.removeChild(prizeBox)
+                        }
+                    }
+                }
+            })
+        })
     </script>
 </body>
 

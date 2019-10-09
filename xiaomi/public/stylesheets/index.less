@@ -1,9 +1,11 @@
 *{
     padding: 0;
     margin: 0;
-    text-decoration:none;
     font-family:sans-serif;    
     list-style:none;
+}
+a{
+    text-decoration:none;
 }
 body{
     background:rgb(245,245,245);
@@ -170,11 +172,11 @@ body{
                 width:296px;
                 height:50px;
                 position:relative;
-                #search{
+                #text{
                     top:0;
                     position:absolute;
-                    width:245px;
-                    height:50px;
+                    width:223px;
+                    height:48px;
                     padding:0 10px;
                     border:1px solid rgb(224, 224, 224);
                     outline:0;
@@ -282,7 +284,7 @@ body{
             .swiper_button_prev{
                 width:41px;
                 height:69px;
-                background:url(../images/icon-slides.png) no-repeat -84px 50%;
+                background:url(../img/icon-slides.png) no-repeat -84px 50%;
                 position:absolute;
                 left:234px;
                 top:50%;
@@ -295,7 +297,7 @@ body{
             .swiper_button_next{
                 width:41px;
                 height:69px;
-                background:url(../images/icon-slides.png) no-repeat -125px 50%;
+                background:url(../img/icon-slides.png) no-repeat -125px 50%;
                 position:absolute;
                 right:0px;
                 top:50%;
@@ -344,31 +346,6 @@ body{
                         
                     }
                     
-                }
-            }
-            .siteCategoryTwo{
-                position:absolute;
-                top:0px;
-                left:234px;
-                background:white;
-                border-right:1px solid rgb(224, 224, 224);
-                border-top:1px solid rgb(224, 224, 224);
-                border-bottom:1px solid rgb(224, 224, 224);
-                display:none;
-                ul{
-                    padding:2px 0px;
-                    li{
-                        float:left;
-                        padding:18px 20px;
-                        img{
-                            float:left;
-                        }
-                        span{
-                            float:left;
-                            font-size:14px;
-                            line-height:40px;
-                        }
-                    }
                 }
             }
         }
@@ -861,6 +838,15 @@ body{
                             color:#333;
                             font-weight:400;
                             font-size:14px;
+                        }
+                        .desc{
+                            font-size:12px;
+                            color:#b0b0b0;
+                            overflow:hidden;
+                            white-space:nowrap;
+                            text-overflow:ellipsis;
+                            margin:10px;
+                            text-align:center; 
                         }
                     }
                     &:nth-child(1){

@@ -16,19 +16,19 @@ router.post('/login.jsp', function (req, res, next) {
             req.session.loginState = uersid;
             req.session.username = data[0].UserName;
             req.session.uid = data[0].uid;
-            res.send('登录成功');
+            res.send({stateCode:true});
         } else {
-            res.send('登录失败')
+            res.send({stateCode:false})
         }
     })
 
 })
 router.post('/logout.jsp', function (req, res, next) {
-    req.session.loginState = uersid;
-    req.session.username = data[0].UserName;
-    req.session.uid = data[0].uid;
+    req.session.loginState = null;
+    req.session.username = null;
+    req.session.uid = null;
     console.log(123);
-    res.render('index') //退出接口还不知道可以不
+    res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid}); //退出接口还不知道可以不
 })
 
 module.exports = router;
