@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header {
+  width: 1130px;
+  margin: 0 auto;
+  height: 98px;
+}
+.main {
+  width: 100%;
+  height: 588px;
+  background-color: aquamarine;
+  position: relative;
+  overflow: hidden;
+}
+.main .back {
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .login_box {
+  width: 410px;
+  height: 556px;
+  position: absolute;
+  top: 25px;
+  left: 1100px;
+  background-color: white;
+}
+.main .login_box .nav {
+  position: relative;
+  width: 100%;
+  height: 52px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main .login_box .nav .usenum,
+.main .login_box .nav .scan {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  line-height: 52px;
+  font-size: 24px;
+}
+.main .login_box .nav .usenum {
+  color: #ff6700;
+}
+.main .login_box .nav::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 30px;
+  width: 1px;
+  background-color: #e0e0e0;
+  left: 50%;
+}
+.main .login_box .userform {
+  width: 410px;
+  height: 415px;
+}
+.main .login_box .userform form {
+  width: 100%;
+  height: 250px;
+}
+.main .login_box .userform form input {
+  margin: 18px 35px 10px 35px;
+  width: 306px;
+  height: 22px;
+  padding: 13px 16px 13px 14px;
+}
+.main .login_box .userform form button {
+  margin: 18px 35px 10px 35px;
+  width: 336px;
+  height: 48px;
+  border: none;
+  background-color: #ff6700;
+  color: white;
+}
+.main .login_box .userform .gotoreg {
+  width: 160px;
+  height: 20px;
+  margin-left: 238px;
+}
+.main .login_box .userform .gotoreg a {
+  position: relative;
+  text-decoration: none;
+  color: #999;
+  margin-right: 6px;
+}
+.main .login_box .userform .gotoreg a::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 16px;
+  width: 1px;
+  background-color: #999;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .login_box .userform .others {
+  width: 100%;
+  padding-top: 30px;
+}
+.main .login_box .userform .others p {
+  position: relative;
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+}
+.main .login_box .userform .others p::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 1px;
+  width: 115px;
+  background-color: #bbb;
+  left: 38px;
+  top: 50%;
+}
+.main .login_box .userform .others p::before {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 1px;
+  width: 115px;
+  background-color: #bbb;
+  right: 38px;
+  top: 50%;
+}
+.main .login_box .userform .others img {
+  margin-left: 32px;
+  margin-top: 18px;
+}
+footer {
+  padding-top: 40px;
+  text-align: center;
+  color: #9d9d9d;
+  font-size: 14px;
+}
