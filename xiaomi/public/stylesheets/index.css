@@ -1,9 +1,11 @@
 * {
   padding: 0;
   margin: 0;
-  text-decoration: none;
   font-family: sans-serif;
   list-style: none;
+}
+a {
+  text-decoration: none;
 }
 body {
   background: #f5f5f5;
@@ -278,7 +280,7 @@ body {
 .main .homeSub .homeHero .swiper_button_prev {
   width: 41px;
   height: 69px;
-  background: url(../images/icon-slides.png) no-repeat -84px 50%;
+  background: url(../img/icon-slides.png) no-repeat -84px 50%;
   position: absolute;
   left: 234px;
   top: 50%;
@@ -291,7 +293,7 @@ body {
 .main .homeSub .homeHero .swiper_button_next {
   width: 41px;
   height: 69px;
-  background: url(../images/icon-slides.png) no-repeat -125px 50%;
+  background: url(../img/icon-slides.png) no-repeat -125px 50%;
   position: absolute;
   right: 0px;
   top: 50%;
@@ -854,6 +856,15 @@ body {
   color: #333;
   font-weight: 400;
   font-size: 14px;
+}
+.page_main .container .home_brick_video .box_bd_video .video_list .video_item a .desc {
+  font-size: 12px;
+  color: #b0b0b0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10px;
+  text-align: center;
 }
 .page_main .container .home_brick_video .box_bd_video .video_list .video_item:nth-child(1) {
   margin-left: 0px;

@@ -1,5 +1,5 @@
 var indexTwo=0;//小米闪购索引
-var izero=-1,ione=-1,itwo=-1,ithree=-1,ifour=-1,ifive=-1;
+var izero=-1,ione=-1,itwo=-1,ithree=-1,ifour=-1,ifive=-1,isix=-1,iseven=-1;
 
 // 显示隐藏
 $('.siteCategoryOne>ul>li').hover(function(){
@@ -119,6 +119,26 @@ $('#swiper_controls_next').on('click',function(){
     }
   $('.swiper_wrapper').css({transform:`translateX(-${992*indexTwo}px)`});
 })
+var timemi=setInterval(function(){
+    indexTwo++;
+    if(indexTwo>=2){
+        indexTwo=2
+    }
+    $('.swiper_wrapper').css({transform:`translateX(-${992*indexTwo}px)`});
+},5000)
+$('.J_flashSaleList').mouseover(function(){
+    clearInterval(timemi);
+})
+$('.J_flashSaleList').mouseout(function(){
+    timemi=setInterval(function(){
+        indexTwo++;
+        if(indexTwo>=2){
+            indexTwo=2
+        }
+        $('.swiper_wrapper').css({transform:`translateX(-${992*indexTwo}px)`});
+    },5000)
+})
+
 
 
 //数据渲染
@@ -134,6 +154,8 @@ $.ajax({
               case 3:ithree++;a(res[i],3,ithree); break;
               case 4:ifour++;a(res[i],4,ifour); break;
               case 5:ifive++;a(res[i],5,ifive); break;
+              case 6:isix++;a(res[i],6,isix); break;
+              case 7:iseven++;a(res[i],7,iseven); break;
           }
                 
   }
@@ -145,5 +167,5 @@ function a(item,j,id){
     $(`.brick-item-m-${j} .title`).eq(id).text(item.PName)
     $(`.brick-item-m-${j} span`).eq(id).text(item.ShoppPrice)
     $(`.brick-item-m-${j} del`).eq(id).text(item.CostpPrice)
-    $(`.brick-item-m-${j} desc`).eq(id).text(item.details)
+    $(`.brick-item-m-${j} .desc`).eq(id).text(item.details)
 }
