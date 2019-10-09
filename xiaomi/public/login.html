@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>登录</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录</title>
+  <link rel="stylesheet" href="stylesheets/login.css">
 </head>
+
 <body>
-    <header>
-        
-    </header>
+  <header>
+    <a href="index.html"><img src="img/mistore_logo.png" alt=""></a>
+  </header>
+  <div class="main">
+    <img class="back" src="img/loginback.jpg" alt="">
+    <div class="login_box">
+      <div class="nav">
+        <div class="usenum">账号登录</div>
+        <div class="scan">扫码登录</div>
+      </div>
+      <div class="userform">
+        <form action="login.jsp" id="getinfoform">
+          <input type="text" name="user" id="username" placeholder="邮箱/手机号码/小米ID">
+          <input type="password" name="password" id="password" placeholder="密码">
+          <button type="button" id="tolog">登录</button>
+        </form>
+        <div class="gotoreg">
+          <a href="register.html">立即注册</a>
+          <span>忘记密码</span>
+        </div>
+        <div class="others">
+          <p>其他登录方式</p>
+          <img src="img/others.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>简体| 繁体| English |常见问题</p>
+    <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+  </footer>
+  <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
+  <script>
+    $('#tolog').on('click',function(){
+      $.ajax({
+        url:'/login.jsp',
+        type:'post',
+        data:$('#getinfoform').serialize(),
+        success:function(res){
+          console.log(res);
+
+        }
+      })
+    })
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="stylesheets/details.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+</head>
+
+<body>
+  
+
+    <div class="pro-bar">
+        <div class="product-nav">
+            <div class="pro-name">
+                <h2><%=data[0].PName%></h2>
+                <span class="spacer">|</span>
+                <a href="#"> <%=data[0].PName%> </a>
+            </div>
+            <div class="pro-about">
+                <a href="#">概述</a>
+                <span class="spacer">|</span>
+                <a href="#">参数</a>
+                <span class="spacer">|</span>
+                <a href="#">F码通道</a>
+                <span class="spacer">|</span>
+                <a href="#">用户评价</a>
+            </div>
+        </div>
+    </div>
+    <div class="pro-det">
+        <div class="img-scroll">
+            <div class="swiperWrapper f1">
+
+                <img src="<%=data[0].img1%>" alt="">
+
+            </div>
+            <div class="swiperWrapper">
+
+                <img src="<%=data[0].img2%>" alt="">
+
+            </div>
+            <div class="swiperWrapper">
+
+                <img src="<%=data[0].img3%>" alt="">
+
+            </div>
+            <div class="swiperWrapper">
+
+                <img src="<%=data[0].img3%>" alt="">
+
+            </div>
+            <div class="swiperWrapper">
+
+                <img src="<%=data[0].img5%>" alt="">
+
+            </div>
+            <div class="swiper_button_prev">&lt;</div>
+            <div class="swiper_button_next">&gt;</div>
+            <div class="swiper_pagination">
+                <ul class="swiper_pagination_ul">
+                    <li data-idx="0" class="smallShow"></li>
+                    <li data-idx="1"></li>
+                    <li data-idx="2"></li>
+                    <li data-idx="3"></li>
+                    <li data-idx="4"></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="pro-pro">
+            <!-- 产品描述 -->
+            <div class="pro-des">
+                <h1 class="name"><%=data[0].Title%></h1>
+                <p class="sale-desc">
+                    <span class="colo"><%=data[0].Favorable%></span><%=data[0].Abstract%>
+                </p>
+                <p class="aftersale-company">小米自营</p>
+                <div class="pro-price">
+                    <span><%=data[0].ShoppPrice%><del><%=data[0].CostpPrice%></del></span>
+                </div>
+                <!-- 秒杀部分 -->
+                <div class="proSeckill clearfix">
+                    <div class="pro-time-head">
+                        <span><img src="img/seckill-icon.png" alt="" srcset="">秒杀</span>
+                        <div class="sectime right">距结束00时8分58秒</div>
+                    </div>
+                    <div class="pro-time-con">
+                        <span class="pro-time-price">￥<em><%=data[0].ShoppPrice%></em>
+                            <del>￥<emclass="J_seckillPriceDel"><%=data[0].CostpPrice%></em></del>
+                        </span>
+                    </div>
+                </div>
+                <div class="flow-wrap">
+                    <ul>
+                        <li>
+                            <span class="flow-tag">赠完即止</span>
+                            <span class="flow-name">赠Redmi充电宝</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-default-address">
+                    <i>&#xe608;</i>
+                    <div>
+                        <div class="address-info">
+                            <span class="item">四川</span>
+                            <span class="item">成都市</span>
+                            <span class="item">锦江区</span>
+                            <span class="item">成龙路街道</span>
+                        </div>
+                        <span class="switch-choose-regions"> 修改 </span>
+                    </div>
+                    <div class="product-status active">
+                        <span class="sale">有现货</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 关于产品的选择 -->
+            <div class="pro-choose">
+                <!-- 选择版本 -->
+                <div class="choosecolor">
+                    <h2>选择版本</h2>
+                    <ul class="step-list step-one clearfix">
+                        <li class="btn btn-biglarge active">
+                            <a href="javascript:void(0);" class="step-name">
+                                <span class="name">8+128GB</span>
+                                <span class="price"><%=data[0].CostpPrice%></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 已选择的产品 -->
+            <div class="pro-list">
+                <ul>
+                    <li>Redmi Note 7 Pro 6GB+128GB<del><%=data[0].CostpPrice%></del> <span> <%=data[0].ShoppPrice%> 元 </span> </li>
+                    <li class="totlePrice" data-name="seckill"> 秒杀价 ：<%=data[0].ShoppPrice%>元 </li>
+                </ul>
+            </div>
+            <!-- 用户按钮 -->
+            <div class="btn-wrap">
+                <button class="buy"><a href="#">立即抢购</a></button>
+                <button class="like"><a href="#">❤喜欢</a></button>
+            </div>
+        </div>
+    </div>
+    <!-- 价格说明 -->
+    <section>
+        <div class="pd-bar">
+            <h2>价格说明</h2>
+            <img src="img/pricedes.jpeg" alt="" srcset="">
+        </div>
+    </section>
+    <div class="bottom">
+        <div class="f-top">
+            <ul>
+                <li><a href="#"><i>&#xe503;</i>预约维修服务</a></li>
+                <li><a href="#"><i>&#xe610;</i>7天无理由退货</a></li>
+                <li><a href="#"><i>&#xe616;</i>15天免费换货</a></li>
+                <li><a href="#"><i>&#xe667;</i>满150元包邮</a></li>
+                <li><a href="#"><i>&#xe506;</i>520余家售后网点</a></li>
+            </ul>
+        </div>
+        <div class="sevice clearfix">
+            <dl>
+                <dt>帮助中心</dt>
+                <dd>账户管理</dd>
+                <dd>购物指南</dd>
+                <dd>订单操作</dd>
+            </dl>
+            <dl>
+                <dt>服务支持</dt>
+                <dd>售后政策</dd>
+                <dd>自动服务</dd>
+                <dd>相关下载</dd>
+            </dl>
+            <dl>
+                <dt>线下门店</dt>
+                <dd>小米之家</dd>
+                <dd>服务网点</dd>
+                <dd>授权体验店</dd>
+            </dl>
+            <dl>
+                <dt>关于小米</dt>
+                <dd>了解小米</dd>
+                <dd>加入小米</dd>
+                <dd>投资者关系</dd>
+            </dl>
+            <dl>
+                <dt>关注我们</dt>
+                <dd>新浪微博</dd>
+                <dd>官方微信</dd>
+                <dd>联系我们</dd>
+            </dl>
+            <dl>
+                <dt>特色服务</dt>
+                <dd>F码通道</dd>
+                <dd>礼物码</dd>
+                <dd>防伪查询</dd>
+            </dl>
+            <div class="contact">
+                <p>400-100-5678</p>
+                <p>周一至周日 8:00-18:00<br>（仅收市话费）</p>
+                <a href="#"><i>&#xe635;</i>人工服务</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="logo"><a href="#"><i>&#xe60e;</i></a></div>
+            <ul class="cleafix">
+                <li><a href="#">小米商城</a></li>
+                <li><a href="#">MIUI</a></li>
+                <li><a href="#">米家</a></li>
+                <li><a href="#">米聊</a></li>
+                <li><a href="#">多看</a></li>
+                <li><a href="#">游戏</a></li>
+                <li><a href="#">路由器</a></li>
+                <li><a href="#">米粉卡</a></li>
+                <li><a href="#">政企服务</a></li>
+                <li><a href="#">小米天猫店</a></li>
+                <li><a href="#">小米集团隐私政策</a></li>
+                <li><a href="#">小米公司儿童信息保护规则</a></li>
+                <li><a href="#">小米商城隐私政策</a></li>
+                <li><a href="#">小米商城用户协议</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li><a href="#">廉正举报</a></li>
+                <li><a href="#">诚信合规</a></li>
+                <li><a href="#">Select Location</a></li>
+            </ul>
+            <p>©mi.com 京ICP证110507号<a>京ICP备10046444号</a> <a>京公网安备11010802020134号</a> 
+                <a>京网文[2017]1530-131号</a><br><a>（京）网械平台备字（2018）第00005号</a>
+                <a>互联网药品信息服务资格证 (京) -非经营性-2014-0090</a>
+                <a>营业执照</a><a>医疗器械公告</a><br><a>增值电信业务许可证</a>
+                网络食品经营备案（京）【2018】WLSPJYBAHF-12
+                <a>食品经营许可证</a><br>违法和不良信息举报电话：185-0130-1238 <a>知识产权侵权投诉</a> 
+                本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+            </p>
+            <div class="img-link">
+                <a href="#"><img src="img/truste.png" alt="" srcset=""></a>
+                <a href="#"><img src="img/v-logo-1.png" alt="" srcset=""></a>
+                <a href="#"><img src="img/v-logo-2.png" alt="" srcset=""></a>
+                <a href="#"><img src="img/v-logo-3.png" alt="" srcset=""></a>
+                <a href="#"><img src="img/v-logo-4.png" alt="" srcset=""></a>
+            </div>
+            <div class="slogan"><img src="img/slogan2016.png" alt="" srcset=""></div>
+        </div>
+    </footer>
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script src="js/details.js"></script>
+</body>
+
+</html>
