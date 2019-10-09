@@ -21,7 +21,7 @@
         <div class="scan">扫码登录</div>
       </div>
       <div class="userform">
-        <form action="login.jsp" id="getinfoform">
+        <form action="" id="getinfoform">
           <input type="text" name="user" id="username" placeholder="邮箱/手机号码/小米ID">
           <input type="password" name="password" id="password" placeholder="密码">
           <button type="button" id="tolog">登录</button>
@@ -43,14 +43,13 @@
   </footer>
   <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
   <script>
-    $('#tolog').on('click',function(){
+    $('#tolog').on('click', function () {
       $.ajax({
-        url:'login/login.jsp',
-        type:'post',
-        data:$('#getinfoform').serialize(),
-        success:function(res){
-          console.log(res);
-
+        url: 'login/login.jsp',
+        type: 'post',
+        data: $('#getinfoform').serialize(),
+        success: function (res) {
+          window.location.href = 'http://127.0.0.1:3000/'
         }
       })
     })

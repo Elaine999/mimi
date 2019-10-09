@@ -12,12 +12,11 @@ router.post('/login.jsp', function (req, res, next) {
         if (err) {
             res.send(err);
         }
-        console.log(data);
-        console.log(req.session);
         if (data.length > 0) {
             req.session.loginState = uersid;
-            res.send(data);
-
+            req.session.username = data[0].UserName;
+            req.session.uid = data[0].uid;
+            res.send('登录成功');
         } else {
             res.send('登录失败')
         }
@@ -25,8 +24,11 @@ router.post('/login.jsp', function (req, res, next) {
 
 })
 router.post('/logout.jsp', function (req, res, next) {
-    req.session.loginState = null;
-    res.render('index.html') //退出接口还不知道可以不
+    req.session.loginState = uersid;
+    req.session.username = data[0].UserName;
+    req.session.uid = data[0].uid;
+    console.log(123);
+    res.render('index') //退出接口还不知道可以不
 })
 
 module.exports = router;
