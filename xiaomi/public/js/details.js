@@ -55,11 +55,18 @@ swiperWrapperimg.mouseout(function(){
 })
 //不同版本  不同价格
 $('.btn-biglarge').on('click',function(){
+    var str=''
     $(this).addClass('active').siblings().removeClass('active')
-    
-    
-})
-var vers=$('.active').find('.name').text()
-    console.log(vers);
+    var vers=$('.active').find('.name').text()
+    //console.log(vers);
     var vers_price=$('.active').find('.price').text()
-    console.log(vers_price);
+    //console.log(vers_price);
+    
+    str+=`
+    
+    <li>${vers}<span>${vers_price}元 </span></li>
+    <li class="totlePrice" data-name="seckill"> 总价 ：${vers_price}元 </li>
+
+    `
+    $('.pro-list').find('.verul').html(str)
+})
