@@ -470,11 +470,38 @@ body {
 .page_main .container .home_flashsale .box_hd {
   width: 1226px;
   height: 58px;
+  position: relative;
 }
 .page_main .container .home_flashsale .box_hd .title {
   line-height: 58px;
   font-weight: 200;
   font-size: 22px;
+}
+.page_main .container .home_flashsale .box_hd .swiper_controls {
+  font-size: 0px;
+  width: 72px;
+  height: 25px;
+  position: absolute;
+  right: 0;
+  top: 24px;
+}
+.page_main .container .home_flashsale .box_hd .swiper_controls span {
+  display: inline-block;
+  width: 36px;
+  height: 24px;
+  padding: 3px 5px;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  line-height: 16px;
+}
+.page_main .container .home_flashsale .box_hd .swiper_controls span i {
+  color: #b0b0b0;
+}
+.page_main .container .home_flashsale .box_hd .swiper_controls span:hover i {
+  color: #ff6700;
 }
 .page_main .container .home_flashsale .box_bd {
   height: 340px;
@@ -539,7 +566,8 @@ body {
 }
 .page_main .container .home_flashsale .box_bd .J_flashSaleList .swiper_wrapper {
   height: 340px;
-  width: 1984px;
+  width: 2976px;
+  transition: all 1s;
 }
 .page_main .container .home_flashsale .box_bd .J_flashSaleList .swiper_wrapper li {
   background: #fff;

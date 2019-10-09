@@ -1,4 +1,4 @@
-
+var indexTwo=0;//小米闪购索引
 
 // 显示隐藏
 $('.siteCategoryOne>ul>li').hover(function(){
@@ -92,6 +92,31 @@ $('#search').blur(function(){
     $('#search').css({borderColor:'rgb(224, 224, 224)'});
     $('.search_btn').css({borderColor:'rgb(224, 224, 224)'});
     $('.search_hot_words').show();
+})
+
+
+//小米闪购轮播
+
+$('#swiper_controls_prev').on('click',function(){
+    indexTwo--;
+    if(indexTwo<=0){
+        indexTwo=0;
+        $('#swiper_controls_prev i').css({color:'#e0e0e0'})
+    }else{
+        $('#swiper_controls_prev i').css({color:'#b0b0b0'})
+    }
+  $('.swiper_wrapper').css({transform:`translateX(-${992*indexTwo}px)`});
+})
+
+$('#swiper_controls_next').on('click',function(){
+    indexTwo++;
+    if(indexTwo>=2){
+        indexTwo=2;
+        $('#swiper_controls_next i').css({color:'#e0e0e0'})
+    }else{
+        $('#swiper_controls_next i').css({color:'#b0b0b0'})
+    }
+  $('.swiper_wrapper').css({transform:`translateX(-${992*indexTwo}px)`});
 })
 
 
