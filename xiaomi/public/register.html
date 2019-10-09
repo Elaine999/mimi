@@ -33,15 +33,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script>
         let code=$('.code')
+        let eMail=$(".eMail")
         $('.codeBtn').on('click', function () {
+            console.log(111);
             $.ajax({
-                url: '/register.html/getcode.php',
+                url: '/reg/getcode.php',
                 type: 'POST',
                 data:{
-                   Code: code.val()},
+                   Code: code.val(),
+                   eMails:eMail.val()
+                },
                 success(res){
                     data=res
-                    console.log(res);
 
                 }
             })
