@@ -8,10 +8,117 @@
     <title>商品详情页</title>
     <link rel="stylesheet" href="stylesheets/details.css">
     <link rel="stylesheet" href="stylesheets/footer.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
 </head>
 
 <body>
-  
+    <div class="siteTopbar">
+        <div class="container">
+            <div class="topbarNav">
+                <a href="">小米商城</a>
+                <span>|</span>
+                <a href="">MIUI</a>
+                <span>|</span>
+                <a href="">IoT</a>
+                <span>|</span>
+                <a href="">云服务</a>
+                <span>|</span>
+                <a href="">金融</a>
+                <span>|</span>
+                <a href="">有品</a>
+                <span>|</span>
+                <a href="">小爱开放平台</a>
+                <span>|</span>
+                <a href="">企业团购</a>
+                <span>|</span>
+                <a href="">资质证照</a>
+                <span>|</span>
+                <a href="">协议规则</a>
+                <span>|</span>
+                <a href="">下载app</a>
+                <span>|</span>
+                <a href="">Select Location</a>
+            </div>
+            <div class="topbarCart">
+                <a href="">
+                    <em class="iconfont"></em>
+                    购物车
+                    <!-- 数据渲染 -->
+                    <span>（0）</span>
+                </a>
+                <div class="J_miniCartMenu">
+                    <div class="menu_content">
+                        <div class="msg_empty">购物车中还没有商品，赶紧选购吧！</div>
+                    </div>
+                </div>
+            </div>
+            <div class="topbarInfo">
+
+                <%if(loginState){%>
+                    <a href="PersonalCenter.html"><%=username%></a>
+                    <span>|</span>
+                    <a href="/login/loginout.jsp">退出</a>
+                <%}else{%>
+                    <a href="login.html">登录</a>
+                    <span>|</span>
+                    <a href="register.html">注册</a>
+                <%}%>
+
+                <span>|</span>
+                <a href="">消息通知</a>
+            </div>
+        </div>
+    </div>
+    <div class="siteHeader">
+        <div class="container">
+            <div class="headerLogo">
+                <a href=""></a>
+            </div>
+            <div class="headerNav">
+                <ul class="navList">
+                    <li class="navCategory"></li>
+                    <li>
+                        <a href="">小米手机</a>
+                    </li>
+                    <li>
+                        <a href="">Redmi 红米</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">笔记本</a>
+
+                    </li>
+                    <li>
+                        <a href="">家电</a>
+                    </li>
+                    <li>
+                        <a href="">路由器</a>
+                    </li>
+                    <li>
+                        <a href="">智能硬件</a>
+                    </li>
+                    <li>
+                        <a href="">服务</a>
+                    </li>
+                    <li>
+                        <a href="">社区</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="headerSearch">
+                <form action="//search.mi.com/search" method="get">
+                    <input type="search" id="search">
+                    <input type="submit" class="search_btn iconfont" value="">
+                    <div class="search_hot_words">
+                        <a href="">小米9 Pro 5G</a>
+                        <a href="">Redmi Note 8</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <div class="pro-bar">
         <div class="product-nav">
@@ -136,7 +243,8 @@
             <!-- 已选择的产品 -->
             <div class="pro-list">
                 <ul>
-                    <li>Redmi Note 7 Pro 6GB+128GB<del><%=data[0].CostpPrice%></del> <span> <%=data[0].ShoppPrice%> 元 </span> </li>
+                    <li>Redmi Note 7 Pro 6GB+128GB<del><%=data[0].CostpPrice%></del> <span> <%=data[0].ShoppPrice%> 元
+                        </span> </li>
                     <li class="totlePrice" data-name="seckill"> 秒杀价 ：<%=data[0].ShoppPrice%>元 </li>
                 </ul>
             </div>
@@ -231,12 +339,12 @@
                 <li><a href="#">诚信合规</a></li>
                 <li><a href="#">Select Location</a></li>
             </ul>
-            <p>©mi.com 京ICP证110507号<a>京ICP备10046444号</a> <a>京公网安备11010802020134号</a> 
+            <p>©mi.com 京ICP证110507号<a>京ICP备10046444号</a> <a>京公网安备11010802020134号</a>
                 <a>京网文[2017]1530-131号</a><br><a>（京）网械平台备字（2018）第00005号</a>
                 <a>互联网药品信息服务资格证 (京) -非经营性-2014-0090</a>
                 <a>营业执照</a><a>医疗器械公告</a><br><a>增值电信业务许可证</a>
                 网络食品经营备案（京）【2018】WLSPJYBAHF-12
-                <a>食品经营许可证</a><br>违法和不良信息举报电话：185-0130-1238 <a>知识产权侵权投诉</a> 
+                <a>食品经营许可证</a><br>违法和不良信息举报电话：185-0130-1238 <a>知识产权侵权投诉</a>
                 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
             </p>
             <div class="img-link">

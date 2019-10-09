@@ -25,7 +25,7 @@ router.get('/details',function(req,res){
   db.dbConnect(sql,sqlarr,function(err,data){
     // console.log(data);
     
-    res.render('details.ejs',{data})
+    res.render('details.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
     
   })
 })
