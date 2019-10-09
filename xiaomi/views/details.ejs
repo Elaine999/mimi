@@ -120,6 +120,7 @@
         </div>
     </div>
 
+
     <div class="pro-bar">
         <div class="product-nav">
             <div class="pro-name">
@@ -231,26 +232,60 @@
                 <div class="choosecolor">
                     <h2>选择版本</h2>
                     <ul class="step-list step-one clearfix">
+                        <% if(data[0].vers1){ %>
                         <li class="btn btn-biglarge active">
                             <a href="javascript:void(0);" class="step-name">
-                                <span class="name">8+128GB</span>
-                                <span class="price"><%=data[0].CostpPrice%></span>
+                                <span class="name"><%= data[0].vers1%> </span>
+                                <span class="price"><%= data[0].vers1_pri%> </span>
                             </a>
                         </li>
+                        <% } %>
+                        <% if(data[0].vers2){ %>
+                        <li class="btn btn-biglarge ">
+                            <a href="javascript:void(0);" class="step-name">
+                                <span class="name"><%= data[0].vers2%> </span>
+                                <span class="price"><%= data[0].vers2_pri%> </span>
+                            </a>
+                        </li>
+                        <% } %>
+                        <% if(data[0].vers3){ %>
+                        <li class="btn btn-biglarge">
+                            <a href="javascript:void(0);" class="step-name">
+                                <span class="name"><%= data[0].vers3%> </span>
+                                <span class="price"><%= data[0].vers3_pri%> </span>
+                            </a>
+                        </li>
+                        <% } %>
+                        <% if(data[0].vers4){ %>
+                        <li class="btn btn-biglarge">
+                            <a href="javascript:void(0);" class="step-name">
+                                <span class="name"><%= data[0].vers4%> </span>
+                                <span class="price"><%= data[0].vers4_pri%> </span>
+                            </a>
+                        </li>
+                        <% } %>
                     </ul>
                 </div>
             </div>
             <!-- 已选择的产品 -->
             <div class="pro-list">
                 <ul>
+<<<<<<< HEAD
                     <li>Redmi Note 7 Pro 6GB+128GB<del><%=data[0].CostpPrice%></del> <span> <%=data[0].ShoppPrice%> 元
                         </span> </li>
                     <li class="totlePrice" data-name="seckill"> 秒杀价 ：<%=data[0].ShoppPrice%>元 </li>
+=======
+                    <li><%=data[0].Title%>&nbsp;&nbsp;&nbsp;<%=data[0].vers1%>
+                        <del><%=data[0].CostpPrice%></del>
+                        <span> <%=data[0].ShoppPrice%> 元 </span>
+                    </li>
+                    <li class="totlePrice" data-name="seckill"> 总价 ：<%=data[0].ShoppPrice%>元 </li>
+>>>>>>> 48f7712112f062a713b9b1259742c68ba9413f45
                 </ul>
             </div>
             <!-- 用户按钮 -->
             <div class="btn-wrap">
-                <button class="buy"><a href="#">立即抢购</a></button>
+                <button class="buy"><a href="#">加入购物车</a></button>
                 <button class="like"><a href="#">❤喜欢</a></button>
             </div>
         </div>
