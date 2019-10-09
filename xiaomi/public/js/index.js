@@ -18,7 +18,7 @@ function(){
 )
 
 //退出的a标签
-$('#loginout').on('click',function(e){
+$('#logout').on('click',function(e){
     e.preventDefault();
     $.ajax({
         url:'/login/logout.jsp',
