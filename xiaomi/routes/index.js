@@ -5,7 +5,7 @@ var db=require('./../utils/db.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express',loginState:123,username:345});
+  res.render('index', { title: 'Express',loginState:null,username:null});
 });
 
 router.get('/123',function(req,res){
