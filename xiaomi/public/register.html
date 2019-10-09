@@ -32,20 +32,20 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script>
-        // let code=$('.code')
-        // $('.codeBtn').on('click', function () {
-        //     $.ajax({
-        //         url: '/register.html/getcode.php',
-        //         type: 'POST',
-        //         data:{
-        //            Code: code.val()},
-        //         success(res){
-        //             data=res
-        //             console.log(res);
+        let code=$('.code')
+        $('.codeBtn').on('click', function () {
+            $.ajax({
+                url: '/register.html/getcode.php',
+                type: 'POST',
+                data:{
+                   Code: code.val()},
+                success(res){
+                    data=res
+                    console.log(res);
 
-        //         }
-        //     })
-        // })
+                }
+            })
+        })
        
     </script>
 </body>

@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/123',function(req,res){
-  let sql='select * from productsinfo left join imglist on productsinfo.PID  = imglist.PID where productsinfo.CategoryID=1';
+  let sql='select * from productsinfo left join imglist on productsinfo.PID  = imglist.PID';
   db.dbConnect(sql,[],function(err,data){
     res.send(data);
   })
