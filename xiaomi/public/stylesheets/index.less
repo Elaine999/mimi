@@ -220,6 +220,36 @@ body{
                         color:white;
                     }
                 }
+                .J_keywordList{
+                    width:243px;
+                    height:300px;
+                    border:1px solid #ff6700;
+                    position:absolute;
+                    top:49px;
+                    left:0px;
+                    display:none;
+                    .result-list{
+                        height:300px;
+                        li{
+                           height:30px;
+                           line-height:30px;
+                           font-size:14px;
+                           padding-left:20px;
+                           &:hover{
+                               background:rgba(255,255,255,.1)
+                           }
+                           a{
+                               color:#333;
+                               display:block;
+                               span{
+                                   display:block;
+                                   width:243px;
+                                   height:300px;
+                               }
+                           }
+                        }
+                    }
+                }
             }
         }
     }
@@ -244,7 +274,7 @@ body{
                 position:absolute;
                 top:0px;
                 left:0px;
-                background:deepskyblue;
+                z-index:0;
                 a{
                     display:block;
                     img{

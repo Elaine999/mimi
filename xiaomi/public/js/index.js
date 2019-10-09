@@ -18,7 +18,7 @@ function(){
 )
 
 //退出的a标签
-$('#loginout').on('click',function(e){
+$('#logout').on('click',function(e){
     e.preventDefault();
     $.ajax({
         url:'/login/logout.jsp',
@@ -100,11 +100,13 @@ $('#text').focus(function(){
     $('#text').css({borderColor:'#ff7600'});
     $('.search_btn').css({borderColor:'#ff7600'});
     $('.search_hot_words').hide();
+    $('.J_keywordList').show();
 })
 $('#text').blur(function(){
     $('#text').css({borderColor:'rgb(224, 224, 224)'});
     $('.search_btn').css({borderColor:'rgb(224, 224, 224)'});
     $('.search_hot_words').show();
+    $('.J_keywordList').hide();
 })
 
 
@@ -174,7 +176,7 @@ $.ajax({
 }
 })
 function a(item,j,id){
-    $(`.brick-item-m-${j} a`).eq(id).attr({href:`localhost:3000/details?PID=${item.PID}`})
+    $(`.brick-item-m-${j} a`).eq(id).attr({href:`/details?pid=${item.PID}`})
     $(`.brick-item-m-${j} img`).eq(id).attr({src:item.img1,alt:item.Title})
     $(`.brick-item-m-${j} .title`).eq(id).text(item.PName)
     $(`.brick-item-m-${j} span`).eq(id).text(item.ShoppPrice)
