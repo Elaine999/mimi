@@ -83,11 +83,11 @@
                 <div class="pro-price">
                     <span><%=data[0].ShoppPrice%><del><%=data[0].CostpPrice%></del></span>
                 </div>
-                <!-- 秒杀部分 -->
+                <!-- 优惠价部分 -->
                 <div class="proSeckill clearfix">
                     <div class="pro-time-head">
-                        <span><img src="img/seckill-icon.png" alt="" srcset="">秒杀</span>
-                        <div class="sectime right">距结束00时8分58秒</div>
+                        <span><img src="img/seckill-icon.png" alt="" srcset="">超值价</span>
+                        <div class="sectime right">心动不如行动</div>
                     </div>
                     <div class="pro-time-con">
                         <span class="pro-time-price">￥<em><%=data[0].ShoppPrice%></em>
@@ -136,7 +136,7 @@
                         <% if(data[0].vers2){ %>
                         <li class="btn btn-biglarge ">
                             <a href="javascript:void(0);" class="step-name">
-                                <span class="name"><%= data[0].vers2%> </span>
+                                <span class="name" value="<%= data[0].vers2%>"><%= data[0].vers2%> </span>
                                 <span class="price"><%= data[0].vers2_pri%> </span>
                             </a>
                         </li>
@@ -164,16 +164,24 @@
             <div class="pro-list">
                 <ul>
                     <li><%=data[0].Title%>&nbsp;&nbsp;&nbsp;<%=data[0].vers1%>
-                        <del><%=data[0].CostpPrice%></del>
-                        <span> <%=data[0].ShoppPrice%> 元 </span>
+                        <!-- <del><%=data[0].CostpPrice%></del> -->
+                        <span> <%=data[0].vers1_pri%>元 </span>
                     </li>
-                    <li class="totlePrice" data-name="seckill"> 总价 ：<%=data[0].ShoppPrice%>元 </li>
+                    <li class="totlePrice" data-name="seckill"> 总价 ：<%=data[0].vers1_pri%>元 </li>
                 </ul>
             </div>
             <!-- 用户按钮 -->
             <div class="btn-wrap">
-                <button class="buy"><a href="#">加入购物车</a></button>
-                <button class="like"><a href="#">❤喜欢</a></button>
+                <%if(loginState){%>
+                    <button class="buy"><a href="#">加入购物车</a></button>
+                    <button class="like"><a href="#">❤喜欢</a></button>
+                <%}else{%>
+                    <button class="buy"><a href="login.html">请先登录再加入购物车</a></button>
+                    <button class="like"><a href="login.html">❤喜欢</a></button>
+                
+                <%}%>
+                
+                
             </div>
         </div>
     </div>
@@ -186,8 +194,8 @@
     </section>
     
     <%include template/footer.ejs %>
-    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
-    <script src="js/details.js"></script>
+                <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+                <script src="js/details.js"></script>
 </body>
 
 </html>
