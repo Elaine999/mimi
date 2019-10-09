@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,46 @@
     <title>小米账号注册</title>
     <link rel="stylesheet" href="stylesheets/register.css">
 </head>
+
 <body>
     <div class="content">
         <a class="regHeader" href="index.html"></a>
         <h1>注册小米帐号</h1>
-        <form action="reg.jsp" method="POST" name="regTable">
+        <form action="/reg/reg.jsp" method="POST" name="regTable">
             <div class="formBox">
-            请输入邮箱<br>
-            <input class="eMail" type="email" name="eMail"><br>
-            请输入密码<br>
-            <input class="regPwd" type="password" name="regPwd"><br>
-            请输入验证码<br>
-            <input type="text" class="code"><button type="button" class="codeBtn" >获取验证码</button><br>
-            <input class="subBtn" type="submit" value="立即注册">
-        </div>
+                请输入邮箱<br>
+                <input class="eMail" type="email" name="eMail"><br>
+                请输入密码<br>
+                <input class="regPwd" type="password" name="regPwd"><br>
+                请输入验证码<br>
+                <input type="text" class="code" name="code"><button type="button" class="codeBtn">获取验证码</button><br>
+                <input class="subBtn" type="submit" value="立即注册">
+            </div>
         </form>
         <p>已阅读并同意：小米 <b>用户协议</b> 和 <b>隐私政策</b> </p>
     </div>
     <footer>
-            <p>简体| 繁体| English |常见问题</p>
-            <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+        <p>简体| 繁体| English |常见问题</p>
+        <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script>
-    
+        // let code=$('.code')
+        // $('.codeBtn').on('click', function () {
+        //     $.ajax({
+        //         url: '/register.html/getcode.php',
+        //         type: 'POST',
+        //         data:{
+        //            Code: code.val()},
+        //         success(res){
+        //             data=res
+        //             console.log(res);
+
+        //         }
+        //     })
+        // })
+       
     </script>
 </body>
+
 </html>
