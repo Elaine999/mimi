@@ -44,7 +44,7 @@ router.get('/comment',function(req,res){
     
   })
 })
-
+//添加信息到购物车
 router.get('/insertcar',function(req,res){
   let Pid=req.query.Pid
   let Pname=req.query.Pname
