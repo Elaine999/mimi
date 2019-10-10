@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid});
 });
 
+
+//主页数据调用
 router.get('/123',function(req,res){
   let sql='select * from productsinfo left join imglist on productsinfo.PID  = imglist.PID';
   db.dbConnect(sql,[],function(err,data){

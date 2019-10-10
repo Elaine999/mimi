@@ -509,8 +509,8 @@ body {
 .page_main .container .home_flashsale .box_hd .swiper_controls span i {
   color: #b0b0b0;
 }
-.page_main .container .home_flashsale .box_hd .swiper_controls span:hover i {
-  color: #ff6700;
+.page_main .container .home_flashsale .box_hd .swiper_controls span:nth-child(1) i {
+  color: #e0e0e0;
 }
 .page_main .container .home_flashsale .box_bd {
   height: 340px;
