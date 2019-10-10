@@ -38,6 +38,8 @@ router.get('/comment',function(req,res){
   let sql='select * from productsinfo where PID=?'
   sqlarr.push(pid)
   db.dbConnect(sql,sqlarr,function(err,data){
+    console.log(data,123456);
+    
     res.render('comment.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
     
   })
