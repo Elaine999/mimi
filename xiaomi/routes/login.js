@@ -16,7 +16,8 @@ router.post('/login.jsp', function (req, res, next) {
             req.session.loginState = uersid;
             req.session.username = data[0].UserName;
             req.session.uid = data[0].uid;
-            res.send({stateCode:true});
+            console.log(req.session.url,66666);
+            res.send({stateCode:true,url:req.session.url});
         } else {
             res.send({stateCode:false})
         }

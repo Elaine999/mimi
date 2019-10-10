@@ -8,6 +8,14 @@ router.get('/', function(req, res, next) {
   res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid});
 });
 
+router.get('/login', function(req, res, next) {
+  // console.log(req.getHeader("referer"));
+  console.log(req.headers);
+  console.log(req.headers.referer,000000);
+  req.session.url=req.headers.referer
+  console.log(req.session.url,4444);
+  res.redirect('/login.html');
+})
 
 //主页数据调用
 router.get('/123',function(req,res){
