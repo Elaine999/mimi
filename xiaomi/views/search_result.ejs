@@ -12,15 +12,15 @@
 </head>
 
 <body>
-    
+
     <%include template/header.ejs %>
 
     <div class="breadcrumbs">
         <div class="container">
-            <a href="//www.mi.com/index.html" data-stat-id="b67dea7347d3b7fc" onclick="">首页</a>
+            <a href="/" data-stat-id="b67dea7347d3b7fc" onclick="">首页</a>
             <span class="sep">&gt;</span>
-            <a href="//search.mi.com/search_小米 9" data-stat-id="1494c00260fd83b3" onclick="">全部结果</a>
-            <span class="sep">&gt;</span><span>小米 9</span>
+            <a href="" data-stat-id="1494c00260fd83b3" onclick="">全部结果</a>
+            <span class="sep">&gt;</span><span id="searchword"><%= keyword %></span>
         </div>
     </div>
     <div class="search-filter">
@@ -68,142 +68,14 @@
                 </ul>
             </div>
             <div class="goods-list-box">
-                <ul class="goods-list">
-                    <li class="goods-item">
-                        <img src="<%= data[0].img1 %>" alt="">
-                        <h2 class="title">小米CC9</h2>
-                        <p class="price">1699元 起 <del>1799元 起 </del></p>
-                        <div class="thumbs">
-                            <ul class="thumbs-list">
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="flags">
-                            <span class="miaosha">秒杀</span>
-                            <span class="zeng">赠</span>
-                            <span class="fenqi">分期</span>
-                            <span class="zeng">劵</span>
-
-                        </div>
-                    </li>
-                    <li class="goods-item">
-                        <img src="images/goods_001.jpg" alt="">
-                        <h2 class="title">小米CC9</h2>
-                        <p class="price">1699元 起 <del>1799元 起 </del></p>
-                        <div class="thumbs">
-                            <ul class="thumbs-list">
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="flags">
-                            <span class="miaosha">秒杀</span>
-                            <span class="zeng">赠</span>
-                            <span class="fenqi">分期</span>
-                            <span class="zeng">劵</span>
-
-                        </div>
-                    </li>
-                    <li class="goods-item">
-                        <img src="images/goods_001.jpg" alt="">
-                        <h2 class="title">小米CC9</h2>
-                        <p class="price">1699元 起 <del>1799元 起 </del></p>
-                        <div class="thumbs">
-                            <ul class="thumbs-list">
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="flags">
-                            <span class="miaosha">秒杀</span>
-                            <span class="zeng">赠</span>
-                            <span class="fenqi">分期</span>
-                            <span class="zeng">劵</span>
-
-                        </div>
-                    </li>
-                    <li class="goods-item">
-                        <img src="images/goods_001.jpg" alt="">
-                        <h2 class="title">小米CC9</h2>
-                        <p class="price">1699元 起 <del>1799元 起 </del></p>
-                        <div class="thumbs">
-                            <ul class="thumbs-list">
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="flags">
-                            <span class="miaosha">秒杀</span>
-                            <span class="zeng">赠</span>
-                            <span class="fenqi">分期</span>
-                            <span class="zeng">劵</span>
-
-                        </div>
-                    </li>
-                    <li class="goods-item">
-                        <img src="images/goods_001.jpg" alt="">
-                        <h2 class="title">小米CC9</h2>
-                        <p class="price">1699元 起 <del>1799元 起 </del></p>
-                        <div class="thumbs">
-                            <ul class="thumbs-list">
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="flags">
-                            <span class="miaosha">秒杀</span>
-                            <span class="zeng">赠</span>
-                            <span class="fenqi">分期</span>
-                            <span class="zeng">劵</span>
-
-                        </div>
-                    </li>
-                    <li class="goods-item">
-                        <img src="images/goods_001.jpg" alt="">
-                        <h2 class="title">小米CC9</h2>
-                        <p class="price">1699元 起 <del>1799元 起 </del></p>
-                        <div class="thumbs">
-                            <ul class="thumbs-list">
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="flags">
-                            <span class="miaosha">秒杀</span>
-                            <span class="zeng">赠</span>
-                            <span class="fenqi">分期</span>
-                            <span class="zeng">劵</span>
-
-                        </div>
-                    </li>
-                    <li class="goods-item">
-                        <img src="images/goods_001.jpg" alt="">
-                        <h2 class="title">小米CC9</h2>
-                        <p class="price">1699元 起 <del>1799元 起 </del></p>
-                        <div class="thumbs">
-                            <ul class="thumbs-list">
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                                <li><img src="images/goods_001.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="flags">
-                            <span class="miaosha">秒杀</span>
-                            <span class="zeng">赠</span>
-                            <span class="fenqi">分期</span>
-                            <span class="zeng">劵</span>
-
-                        </div>
-                    </li>
-                </ul>
+                <ul class="goods-list"></ul>
             </div>
         </div>
     </div>
-    <%= console.log(data) %>
     <%include template/footer.ejs %>
     <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
     <script src="js/logout.js"></script>
-    
+    <script src="js/search.js"></script>
 </body>
 
 </html>
