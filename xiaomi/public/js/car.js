@@ -1,21 +1,32 @@
-    // let cart_shop = document.querySelector(".cart_shop")
+    let phoneBox = document.querySelector(".phoneBox")
    
-    // $.ajax({
-    //     url: "/car/car.php",
-    //     type: 'get',
-    //     success:function(res) {
-    //         for (var i = 0; i < 10; i++) {
-    //             cart_shop.innerHTML += `
-    //             <li>
-    //                 <img src="" alt="图片">
-    //                 <p>商品名称</p>
-    //                 <span>价格</span>
-    //                 <h5>好评</h5>
-    //             </li>
-    //             `
-    //         }
-    //     }
+    $.ajax({
+        url: "/car/car.php",
+        type: 'get',
+        success:function(res) {
+            console.log(res[0].Pimg);
+            
+            for (var i = 0; i < res.length; i++) {
+                let sum = res[i].Ppri
+                sum=sum+res[i].Ppri
+                phoneBox.innerHTML += `
+                <ul>
+                <li>&nbsp;</li>
+                <li><img src="${res[i].Pimg}"></li>
+                <li> ${res[i].Pname} </li>
+                <li> ${res[i].Ppri} </li>
+                <li class="inputBoxs">
+                    <input type="button" value="-">
+                    <input type="text" value="1" class="textBtns">
+                    <input type="button" value="+">
+                </li>
+                <li>${sum}</li>
+                <li>X</li>
+            </ul>
+                `
+            }
+        }
 
-    // })
+    })
 
    
