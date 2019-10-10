@@ -79,7 +79,7 @@ $('.buy').on('click',function(){
     var u_id=$('.uid').text()
     $.ajax({
         type:'get',
-        url:'/cart',
+        url:'/insertcar',
         data:{
             Pid:pid,
             Pname:pname,
@@ -97,17 +97,18 @@ $('.buy').on('click',function(){
                             fontSize: "20px",
                             textAlign: "center",
                             lineHeight: "100px",
-                            position: "absolute",
+                            position: "fixed",
                             top: "50%",
                             left: "50%",
-                            transform:" translate(-50%, -50%)"
-                        }
-                        )
+                            marginLeft:'-150px',
+                            marginTop:'-50px'
+                        })
                         prizeBox.innerText = `已成功加入购物车`
                         document.body.appendChild(prizeBox)
                         prizeBox.onclick = function () {
                             document.body.removeChild(prizeBox)
                         }
+            
         }
     })
 })
