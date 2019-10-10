@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/comment.css">
+    <link rel="stylesheet" href="stylesheets/details.css">
+    <link rel="stylesheet" href="stylesheets/head.css">
+
+</head>
+
+<body>
+    <%include template/header.ejs %>
+    <div class="pro-bar">
+        <div class="product-nav">
+            <div class="pro-name">
+                <h2><%=data[0].PName%></h2>
+                <span class="spacer">|</span>
+                <a href="#"> <%=data[0].PName%> </a>
+            </div>
+            <div class="pro-about">
+                <a href="#">概述</a>
+                <span class="spacer">|</span>
+                <a href="#">参数</a>
+                <span class="spacer">|</span>
+                <a href="#">F码通道</a>
+                <span class="spacer">|</span>
+                <a href="javascript:void(0);" id="color">用户评价</a>
+                <button><a href="#">立即购买</a></button>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="review">
+            <h2>热门评价</h2>
+            <div class="discuss">
+                <div class="dis-head">
+                    <div class="head-portrait"><a href="#"></a></div>
+                    <div class="head-name"><a href="#">hahah</a></div>
+                    <div class="head-time">2019年10月08日</div>
+                </div>
+                <div class="dis-body">
+                    <p class="dis-text">有些微重，手感不错，也挺好看的；指纹和面部解锁反应速度还挺快的，面部解锁是2D的不是3D的，但也可以理解，毕竟是千元机，这已经做的很好了。摄像很清晰，就是照片占内存太大了，一张6400万的照片20多M；3.5mm耳机孔非常人性，可以边充电边玩戴耳机。充电速度觉得还行，不是特别快，但也够用了，电池很大，但是觉得不应该是4500毫安的应有的续航，没有我想象中的续航能力强，可能是因为12nm和大屏幕的因素吧，但比起很多手机也还不错了。还有就是大家都说的发热的问题，买回来以后打了很多次王者，没觉得多热，正常温度吧，但中间有一次打王者就特别热，后来也没再那么热过，打了一把吃鸡，比王者热一些，就是正常的发烧，还能接受。充电的时候前期会有一些微热，快充满的时候就不热了。它的另一个卖点说是怎么握网络都很强没太多感触，因为我这的电信卡就是网络很差劲，用哪个手机都是这样，这个也一样，所以没办法评论。摄像头微微突出手机胶套，就突出一丢丢。暂时就想到这些。</p>
+                    <div class="dis-img"><img src="img/comment1.jpg" alt="" srcset=""></div>
+                    <div class="ope">
+                            <a href="javascript:void(0);"><i>99</i>点赞</a>
+                            <a href="javascript:void(0);"><i>88</i>评论</a>
+                            <a href="javascript:void(0);"><i>77</i>分享</a >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
