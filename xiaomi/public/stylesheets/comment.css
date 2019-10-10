@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ .product-nav #color{
+    color: #ff6700;
+}
+.product-nav .pro-about button{
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    background-color: #ff6700;
+    margin-left: 5px;
+    
+    border-color: #ff6700;
+    outline: none;
+}
+.product-nav .pro-about button a{
+    color: #fff;
+    display: block;
+}
+.review{
+    width: 1226px;
+    margin: 0 auto;
+}
+.discuss{
+    width: 1170px;
+    background-color: #fff;
+    padding: 28px;
+}
+.discuss .dis-head{
+    position: relative;
+}
+.discuss .dis-head .head-portrait{
+    width: 47px;
+    height: 47px;
+    background-color: cadetblue;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+.dis-head .head-name,.head-time,.dis-body{
+    margin-left: 88px;
+    color: #b0b0b0;
+}
+.dis-head .head-name a{
+    color: #8d665a;
+}
+.dis-body{
+    width: 900px;
+    margin-top: 15px;
+}
+.dis-body .dis-img img{
+    max-width: 450px;
+}
+.dis-body .ope{
+    display: flex;
+    justify-content: space-around;
+}
+.dis-body .ope a{
+    display: block;
+}

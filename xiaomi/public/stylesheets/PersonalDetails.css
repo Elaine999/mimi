@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../ICONFONT/iconfont.eot');
+  src: url('../ICONFONT/iconfont.eot?#iefix') format('embedded-opentype'), url('../ICONFONT/iconfont.woff2') format('woff2'), url('../ICONFONT/iconfont.woff') format('woff'), url('../ICONFONT/iconfont.ttf') format('truetype'), url('../ICONFONT/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
+  background: #EFEFEF;
+}
+ul,
+li {
+  list-style: none;
+}
+div.base {
+  width: 1226px;
+  margin: 0 auto;
+}
+div.base div.title {
+  height: 60px;
+  margin-top: 30px;
+  position: relative;
+}
+div.base div.title div.logo {
+  display: inline-block;
+  width: 43px;
+  height: 100%;
+  background: url(https://account.xiaomi.com/static/res/fa93d30/passport/acc-2014/img/n-logo.png) no-repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+div.base div.title div.text {
+  display: inline-block;
+  height: 100%;
+  margin-left: 30px;
+  letter-spacing: 6px;
+  font-family: SimHei;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 60px;
+  color: #FF6700;
+  position: absolute;
+  top: 0;
+}
+div.base div.info {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 30px auto 0;
+  background: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+div.base div.info div.avatar {
+  width: 282px;
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+div.base div.info div.avatar img {
+  width: 100%;
+  height: 282px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid #E0E0E0;
+}
+div.base div.info div.avatar h2 {
+  width: 100%;
+  font-family: Arial,SimHei;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div.base div.info div.avatar span {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 0;
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: normal;
+  color: #777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div.base div.info div.avatar span:first-of-type {
+  margin-top: 5px;
+}
+div.base div.info div.details {
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 120px;
+}
+div.base div.info div.details ul {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+div.base div.info div.details ul li {
+  width: 100%;
+  height: 70px;
+}
+div.base div.info div.details ul li span {
+  display: inline-block;
+  width: 180px;
+  font-family: "宋体";
+  font-size: 32px;
+  font-weight: bold;
+  text-align: right;
+}
+div.base div.info div.details ul li i,
+div.base div.info div.details ul li label {
+  font-size: 32px;
+  font-style: normal;
+}
+div.base div.info div.details ul li i {
+  font-weight: bold;
+}
+div.base div.info div.details ul li label {
+  font-family: SimHei;
+}
+div.base div.info div.details ul li input,
+div.base div.info div.details ul li select {
+  height: 40px;
+  font-size: 32px;
+}
+div.base div.info div.details ul li input[type="radio"] {
+  width: 32px;
+  height: 32px;
+}
+div.base div.info div.details ul li input[type="radio"]:checked {
+  color: red;
+}
+div.base div.info div.details ul li b {
+  font-size: 24px;
+}
+div.base div.info div.details ul li:last-child {
+  text-align: center;
+  line-height: 70px;
+}
+div.base div.info div.details ul li:last-child button {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 6px;
+  font-family: SimHei;
+  font-size: 28px;
+  outline: 0;
+  color: white;
+  border: none;
+}
+div.base div.info div.details ul li:last-child button.ensure {
+  background: dodgerblue;
+}
+div.base div.info div.details ul li:last-child button.reset {
+  background: darkviolet;
+}
+div.base div.info div.details ul li:last-child button.cancel {
+  background: black;
+}
