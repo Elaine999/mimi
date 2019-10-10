@@ -44,14 +44,14 @@ swiperWrapperimg.mouseover(function(){
     window.clearInterval(timeId);
 })
 swiperWrapperimg.mouseout(function(){
-    // var timeId=setInterval(function(){
-    //     index++;
-    //     if(index>len-1){
-    //         index=0;
-    //     }
-    //     $(swiperWrapperimg[index]).fadeIn('slow').siblings('.swiperWrapper').fadeOut('fast');
-    //     $(smallpoints[index]).addClass('smallShow').siblings().removeClass('smallShow')
-    // },3000) 
+    timeId=setInterval(function(){
+        index++;
+        if(index>len-1){
+            index=0;
+        }
+        $(swiperWrapperimg[index]).fadeIn('slow').siblings('.swiperWrapper').fadeOut('fast');
+        $(smallpoints[index]).addClass('smallShow').siblings().removeClass('smallShow')
+    },3000) 
 })
 //不同版本  不同价格
 $('.btn-biglarge').on('click',function(){

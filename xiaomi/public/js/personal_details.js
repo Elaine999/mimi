@@ -178,7 +178,7 @@ $('.tip_btns .a2').on('click',function(){
         $('#confirm').on('click',function(){
             $.ajax({
                 type:'get',
-                url:'/345',
+                url:'PersonalDetail/345',
                 data:canvasNode.toDataURL(),
                 success:function(res){
 
