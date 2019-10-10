@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/cart.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+</head>
+
+<body>
+    <header>
+        <div class="logoBox">
+            <div class="logo"></div>
+            <h1>我的购物车</h1>
+        </div>
+
+        <div class="cart_logBox">
+            <a href="login.html" class="login">登录</a>
+            <a href="register.html" class="reg">注册</a>
+        </div>
+    </header>
+    <div class="cart_content">
+
+        <div class="cart_data">
+            <div class="content_header">
+                <ul>
+                    <li>全选</li>
+                    <li>&nbsp;</li>
+                    <li>商品名称</li>
+                    <li>单价</li>
+                    <li>数量</li>
+                    <li>小计</li>
+                    <li>操作</li>
+                </ul>
+            </div>
+            <div class="phoneBox">
+                <ul>
+                    <li>&nbsp;</li>
+                    <li><img alt=""
+                            src="//cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1550474775.86353113.jpg?thumb=1&amp;w=80&amp;h=80"
+                            width="80" height="80"></li>
+                    <li> 小米9 SE 街头风保护壳 黑色 </li>
+                    <li> 49元 </li>
+                    <li class="inputBoxs">
+                        <input type="button" value="-">
+                        <input type="text" value="1" class="textBtns">
+                        <input type="button" value="+">
+                    </li>
+                    <li>49元 </li>
+                    <li>X</li>
+                </ul>
+            </div>
+            <div class="payBox">
+                <p>共 1 件商品，已选择 1 件</p>
+                <span>合计<b>49</b>元</span>
+                <div class="right">
+                    去结算
+                </div>
+            </div>
+        </div>
+        <!-- <h2>———————————————为您推荐———————————————</h2>
+        <div>
+            <ul class="cart_shop">
+
+            </ul>
+        </div> -->
+        <!-- </div> -->
+        <%include template/footer.ejs %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="js/car.js"></script>
+</body>
+
+</html>
