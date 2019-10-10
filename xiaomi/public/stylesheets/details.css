@@ -366,6 +366,11 @@ a{
     width: 298px;
     background-color: #ff6700;
     border: 1px solid #ff6700;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-wrap .buy:hover{
+    background-color: rgb(242,88,7);
 }
 .btn-wrap .buy a:hover{
     background-color: rgb(242,88,7);
