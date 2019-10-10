@@ -25,8 +25,9 @@ $("body").click(function(e){
         url: "/car/car.php",
         type: 'get',
         success:function(res) {
-            // console.log(res[0].Pimg);
+            console.log(res[0].Uid);
             let sum = 0
+            // if(res[0].Uid=)
             for (var i = 0; i < res.length; i++) {
                 sum=parseInt(sum)+ parseInt(res[i].Ppri) 
                 phoneBox.innerHTML += `
