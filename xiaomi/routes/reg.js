@@ -74,7 +74,7 @@ router.post("/getcode.php", function (req, res, next) {
 
     sendEmail.send(emailCotent)
     // 插入
-    let sql1 = "INSERT INTO verCode (email,codes) VALUES(?,?)"
+    let sql1 = "INSERT INTO vercode (email,codes) VALUES(?,?)"
     let sqlARR1 = [Emails, emailCode]
     // 插入
     db.dbConnect(sql1, sqlARR1, function (err, data) {
