@@ -1,0 +1,435 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../ICONFONT/iconfont.eot');
+  src: url('../ICONFONT/iconfont.eot?#iefix') format('embedded-opentype'), url('../ICONFONT/iconfont.woff2') format('woff2'), url('../ICONFONT/iconfont.woff') format('woff'), url('../ICONFONT/iconfont.ttf') format('truetype'), url('../ICONFONT/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background: #F5F5F5;
+}
+i {
+  font-size: 12px;
+}
+a {
+  display: inline-block;
+  text-decoration: none !important;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul,
+li {
+  list-style: none;
+}
+span.line {
+  margin: 0;
+  color: #424242;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 40px;
+}
+div.head {
+  width: 100%;
+  height: 40px;
+  background: #333;
+}
+div.head div.content {
+  width: 1226px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.head div.content div.nav {
+  height: 100%;
+}
+div.head div.content div.nav a {
+  color: #B0B0B0;
+}
+div.head div.content div.nav a:hover {
+  color: white;
+}
+div.head div.content div.personal {
+  height: 100%;
+  position: relative;
+}
+div.head div.content div.personal a {
+  color: #B0B0B0;
+}
+div.head div.content div.personal a:hover {
+  color: white;
+}
+div.head div.content div.personal span.user {
+  max-width: 190px;
+  height: 100%;
+  line-height: 40px;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+div.head div.content div.personal span.user a span {
+  max-width: 150px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.head div.content div.personal span.user ul {
+  display: none;
+  position: absolute;
+  left: 2px;
+  top: 40px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 32;
+  padding: 0 5px;
+}
+div.head div.content div.personal span.user ul li {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 0;
+  text-align: center;
+  line-height: 1;
+}
+div.head div.content div.personal span.user:hover {
+  height: 218px;
+  background: white;
+  transition: height 0.1s linear;
+}
+div.head div.content div.personal span.user:hover a {
+  color: #FF6700;
+}
+div.head div.content div.personal span.user:hover a span {
+  color: #FF6700;
+}
+div.head div.content div.personal span.user:hover a span i.iconfont {
+  color: #FF6700;
+}
+div.head div.content div.personal span.user:hover ul {
+  display: inline-block;
+}
+div.head div.content div.personal span.user:hover ul li:hover {
+  background: #EFEFEF;
+}
+div.head div.content div.personal span.user:hover ul li:hover a {
+  color: #FF6700;
+}
+div.head div.content div.personal span.user:hover a {
+  color: black;
+}
+div.head div.content div.shoppingcar {
+  width: 120px;
+  height: 100%;
+  line-height: 40px;
+  display: inline-block;
+  margin-left: 15px;
+  color: #B0B0B0;
+  background: #424242;
+  font-size: 12px;
+  text-align: center;
+}
+div.head div.content div.shoppingcar i {
+  font-size: 16px;
+}
+header {
+  width: 100%;
+  height: 100px;
+  background: white;
+}
+header div.header {
+  width: 1226px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+header div.header div.header-logo {
+  display: inline-block;
+  width: 62px;
+  margin-top: 22px;
+  position: absolute;
+}
+header div.header div.header-logo a {
+  display: block;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  background-color: #FF6700;
+  background-image: url(https://s01.mifile.cn/i/mi-logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+header div.header div.header-logo a::after {
+  background: url(https://s01.mifile.cn/i/mi-home.png) no-repeat 50% 50%;
+  margin-left: -55px;
+  opacity: 0;
+  width: 55px;
+  height: 55px;
+  content: "";
+  display: block;
+  transform-origin: 50% 50%;
+  transition: all 0.2s;
+}
+header div.header div.header-nav {
+  display: inline-block;
+  width: 850px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+header div.header div.header-nav ul {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12px 0 0 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+header div.header div.header-nav ul li {
+  position: relative;
+}
+header div.header div.header-nav ul li a {
+  display: block;
+  padding: 26px 10px 38px;
+  text-align: right;
+  color: #333;
+  font-size: 16px;
+  line-height: 24px;
+}
+header div.header div.header-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 296px;
+  margin-top: 25px;
+}
+header div.header div.header-search form {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+header div.header div.header-search form input.search-text {
+  width: 223px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 51px;
+  padding: 0 10px;
+  border: 1px solid #E0E0E0;
+  font-size: 14px;
+  line-height: 48px;
+  outline: 0;
+  transition: all 0.2s;
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+header div.header div.header-search form input[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 52px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #E0E0E0;
+  font-size: 24px;
+  line-height: 1;
+  outline: 0;
+  color: #616161;
+  transition: all 0.2s;
+  background: white;
+}
+div.home {
+  width: 1226px;
+  margin: 0 auto;
+  height: 40px;
+}
+div.home a {
+  color: #757575;
+  line-height: 40px;
+}
+div.home span {
+  color: #757575;
+  line-height: 40px;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+div.containers {
+  width: 1226px;
+  height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+div.containers aside {
+  width: fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 36px 48px;
+  background: white;
+}
+div.containers aside div:not(:first-child) {
+  margin-top: 12px;
+}
+div.containers aside h3.title {
+  font-family: "微软雅黑";
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 52px;
+  color: #333;
+}
+div.containers aside ul li {
+  padding: 6px 0;
+  box-sizing: border-box;
+}
+div.containers aside ul li a {
+  font-family: "微软雅黑";
+  font-size: 14px;
+  color: #757575;
+}
+div.containers div.personalInfo {
+  flex: 1;
+  margin-left: 14px;
+  background: white;
+  padding: 36px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+div.containers div.personalInfo div.vessel {
+  flex: 1;
+  width: 100%;
+  margin: 0 48px;
+  padding: 24px 0 0;
+}
+div.containers div.personalInfo div.vessel div.user {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+div.containers div.personalInfo div.vessel div.user div.user-card {
+  display: inline-block;
+  width: 302px;
+  height: 160px;
+  padding: 40px 0 0 180px;
+  position: relative;
+}
+div.containers div.personalInfo div.vessel div.user div.user-card img {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 150px;
+  border: 1px solid #E0E0E0;
+}
+div.containers div.personalInfo div.vessel div.user div.user-card h2.username {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #616161;
+}
+div.containers div.personalInfo div.vessel div.user div.user-card p.tip {
+  margin: 0 0 10px;
+  color: #B0B0B0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+div.containers div.personalInfo div.vessel div.user div.user-card a.link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #FF6700;
+}
+div.containers div.personalInfo div.vessel div.user div.user-actions {
+  display: inline-block;
+  width: 358px;
+  height: fit-content;
+  margin-top: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+div.containers div.personalInfo div.vessel div.user div.user-actions ul.action-list {
+  color: #757575;
+}
+div.containers div.personalInfo div.vessel div.user div.user-actions ul.action-list li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 6px 0;
+  position: relative;
+}
+div.containers div.personalInfo div.vessel div.user div.user-actions ul.action-list li span.level-2 {
+  color: #FFAC13;
+}
+div.containers div.personalInfo div.vessel div.detail {
+  width: 100%;
+  border-top: 1px solid #E0E0E0;
+}
+div.containers div.personalInfo div.vessel div.detail ul.info-list {
+  padding: 60px 0 0;
+  color: #757575;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+div.containers div.personalInfo div.vessel div.detail ul.info-list li {
+  position: relative;
+  width: 276px;
+  height: 65px;
+  padding: 15px 0 0 112px;
+  margin: 0 0 80px 14px;
+}
+div.containers div.personalInfo div.vessel div.detail ul.info-list li h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+div.containers div.personalInfo div.vessel div.detail ul.info-list li h3 span.num {
+  color: #FF6700;
+}
+div.containers div.personalInfo div.vessel div.detail ul.info-list li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #757575;
+}
+div.containers div.personalInfo div.vessel div.detail ul.info-list li a i.iconfont {
+  font-size: 16px;
+  line-height: 16px;
+  vertical-align: -1px;
+}
+div.containers div.personalInfo div.vessel div.detail ul.info-list li a:hover {
+  color: #FF6700;
+}
+div.containers div.personalInfo div.vessel div.detail ul.info-list li img {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+div.footer {
+  margin-top: 40px;
+}
