@@ -70,3 +70,7 @@ $('.btn-biglarge').on('click',function(){
     `
     $('.pro-list').find('.verul').html(str)
 })
+//携带产品信息添加到数据库
+// function a(item,j,id){
+//     $(`.buy a`).eq(id).attr({href:`/cart?pid=${item.PID}`})
+// }

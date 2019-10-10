@@ -8,13 +8,15 @@ router.get('/', function(req, res, next) {
   res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid});
 });
 
+
+//主页数据调用
 router.get('/123',function(req,res){
   let sql='select * from productsinfo left join imglist on productsinfo.PID  = imglist.PID';
   db.dbConnect(sql,[],function(err,data){
     res.send(data);
   })
 })
-
+//产品详情页
 router.get('/details',function(req,res){
   let pid = req.query.pid;
   let sqlarr = [];
@@ -26,6 +28,17 @@ router.get('/details',function(req,res){
     // console.log(data);
     
     res.render('details.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
+    
+  })
+})
+//评论
+router.get('/comment',function(req,res){
+  let pid = req.query.pid;
+  let sqlarr = [];
+  let sql='select * from productsinfo where PID=?'
+  sqlarr.push(pid)
+  db.dbConnect(sql,sqlarr,function(err,data){
+    res.render('comment.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
     
   })
 })
