@@ -50,7 +50,7 @@
         data: $('#getinfoform').serialize(),
         success: function (res) {
           if (res.stateCode) {
-            window.location.href = 'http://127.0.0.1:3000/'
+            window.location.href = res.url
           } else {
             let prizeBox = document.createElement("div")
             $(prizeBox).css({

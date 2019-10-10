@@ -1,5 +1,5 @@
 var indexTwo = 0;//小米闪购索引
-var izero = -1, ione = -1, itwo = -1, ithree = -1, ifour = -1, ifive = -1, isix = -1, iseven = -1;
+var izero = -1, ione = -1, itwo = -1, ithree = -1, ifour = -1, ifive = -1, isix = -1;
 var times=null;
 // 显示隐藏
 $('.siteCategoryOne>ul>li').hover(function () {
@@ -204,7 +204,6 @@ $.ajax({
                 case 4: ifour++; a(res[i], 4, ifour); break;
                 case 5: ifive++; a(res[i], 5, ifive); break;
                 case 6: isix++; a(res[i], 6, isix); break;
-                case 7: iseven++; a(res[i], 7, iseven); break;
             }
         }
     }

@@ -40,8 +40,14 @@ a{
     height: 47px;
     background-color: cadetblue;
     position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
     top: 0;
     left: 20px;
+}
+.discuss .dis-head .head-portrait img{
+    width: 47px;
+    height: 47px;
 }
 .dis-head .head-name,.head-time,.dis-body{
     margin-left: 88px;
@@ -63,4 +69,7 @@ a{
 }
 .dis-body .ope a{
     display: block;
+}
+section {
+    padding-bottom: 30px;
 }

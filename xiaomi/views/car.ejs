@@ -8,20 +8,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="stylesheets/cart.css">
     <link rel="stylesheet" href="stylesheets/footer.css">
+    <link rel="stylesheet" href="stylesheets/head.css">
+
 </head>
 
 <body>
-    <header>
-        <div class="logoBox">
-            <div class="logo"></div>
-            <h1>我的购物车</h1>
-        </div>
+        <%include template/header.ejs %>
 
-        <div class="cart_logBox">
-            <a href="login.html" class="login">登录</a>
-            <a href="register.html" class="reg">注册</a>
-        </div>
-    </header>
     <div class="cart_content">
 
         <div class="cart_data">
@@ -44,6 +37,8 @@
               
             </div>
         </div>
+    </div>
+
         <!-- <h2>———————————————为您推荐———————————————</h2>
         <div>
             <ul class="cart_shop">
@@ -52,8 +47,13 @@
         </div> -->
         <!-- </div> -->
         <%include template/footer.ejs %>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+        <script>
+                var userId="<%= uid %>"
+            </script>
         <script src="js/car.js"></script>
+    <script src="js/logout.js"></script>
+        
 </body>
 
 </html>
