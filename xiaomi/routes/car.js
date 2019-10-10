@@ -7,13 +7,17 @@ router.get('/', function(req, res, next) {
 router.get('/car.php', function (req, res, next) {
     let sql='select * from cartable ';
     db.dbConnect(sql,[],function(err,data){
-        console.log(data);
+        // console.log(data);
         res.send(data);
       })
 })
+// 点击
 router.get('/car.jsp', function (req, res, next) {
-  let sql='delete * from cartable ';
-  db.dbConnect(sql,[],function(err,data){
+  let cids = req.query.cid
+  console.log(cids);
+  let sqlarr=[cids]
+  let sql='DELETE  FROM cartable where Cid=? ';
+  db.dbConnect(sql,sqlarr,function(err,data){
       console.log(data);
       res.send(data);
     })

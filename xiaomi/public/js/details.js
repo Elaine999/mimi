@@ -44,14 +44,14 @@ swiperWrapperimg.mouseover(function(){
     window.clearInterval(timeId);
 })
 swiperWrapperimg.mouseout(function(){
-    // var timeId=setInterval(function(){
-    //     index++;
-    //     if(index>len-1){
-    //         index=0;
-    //     }
-    //     $(swiperWrapperimg[index]).fadeIn('slow').siblings('.swiperWrapper').fadeOut('fast');
-    //     $(smallpoints[index]).addClass('smallShow').siblings().removeClass('smallShow')
-    // },3000) 
+    timeId=setInterval(function(){
+        index++;
+        if(index>len-1){
+            index=0;
+        }
+        $(swiperWrapperimg[index]).fadeIn('slow').siblings('.swiperWrapper').fadeOut('fast');
+        $(smallpoints[index]).addClass('smallShow').siblings().removeClass('smallShow')
+    },3000) 
 })
 //不同版本  不同价格
 $('.btn-biglarge').on('click',function(){
@@ -76,10 +76,10 @@ $('.buy').on('click',function(){
     //var u_vers=$('.active').find('.name').text()
     var u_verprice=$('.active').find('.price').text()
     var u_img=$('.f1').find('img').attr('src')
-    var u_id=$('.uid').text()
+    var u_id=userId
     $.ajax({
         type:'get',
-        url:'/cart',
+        url:'/insertcar',
         data:{
             Pid:pid,
             Pname:pname,
@@ -97,17 +97,18 @@ $('.buy').on('click',function(){
                             fontSize: "20px",
                             textAlign: "center",
                             lineHeight: "100px",
-                            position: "absolute",
+                            position: "fixed",
                             top: "50%",
                             left: "50%",
-                            transform:" translate(-50%, -50%)"
-                        }
-                        )
+                            marginLeft:'-150px',
+                            marginTop:'-50px'
+                        })
                         prizeBox.innerText = `已成功加入购物车`
                         document.body.appendChild(prizeBox)
                         prizeBox.onclick = function () {
                             document.body.removeChild(prizeBox)
                         }
+            
         }
     })
 })

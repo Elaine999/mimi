@@ -182,7 +182,7 @@
             <div class="btn-wrap">
                 <%if(loginState){%>
                     <button class="buy">加入购物车</button>
-                    <button class="like"><a href="#">❤喜欢</a></button>
+                    <button class="like"><a href="#"><i>❤</i>喜欢</a></button>
                 <%}else{%>
                     <button class="buy"><a href="login.html">请先登录再加入购物车</a></button>
                     <button class="like"><a href="login.html">❤喜欢</a></button>
@@ -203,6 +203,9 @@
     
     <%include template/footer.ejs %>
     <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script>
+            var userId="<%= uid %>"
+        </script>
     <script src="js/details.js"></script>
     <script src="js/logout.js"></script>
 

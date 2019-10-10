@@ -38,25 +38,25 @@ router.get('/comment',function(req,res){
   let sql='select * from productsinfo where PID=?'
   sqlarr.push(pid)
   db.dbConnect(sql,sqlarr,function(err,data){
-    console.log(data,123456);
+    //console.log(data,123456);
     
     res.render('comment.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
     
   })
 })
 
-router.get('/details',function(req,res){
+router.get('/insertcar',function(req,res){
   let Pid=req.query.Pid
   let Pname=req.query.Pname
   let Uid=req.query.Uid
   let Pimg=req.query.Pimg
   let Ppri=req.query.Ppri
-  let sqlarr=[]
-  let sql='insert into cartable(Pid,Uid,Pname,Ppri,Pimg) values(Pid,Uid,Pname,Ppri,Pimg)'
+  let sqlarr=[Pid,Uid,Pname,Ppri,Pimg]
+  let sql='insert into cartable(Pid,Uid,Pname,Ppri,Pimg) values(?,?,?,?,?)'
   db.dbConnect(sql,sqlarr,function(err,data){
     // console.log(data);
     
-    res.render('details.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
+    res.render('car.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
   })
 })
 module.exports = router;
