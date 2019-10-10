@@ -12,6 +12,7 @@ var regRouter = require('./routes/reg');
 var searchRouter = require('./routes/search');
 var comRouter = require('./routes/com');
 var carRouter = require('./routes/car');
+var PersonalDetailRouter=require('./routes/PersonalDetail');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use('/reg',regRouter);
 app.use('/search_result',searchRouter);
 app.use('/com',comRouter)
 app.use('/car',carRouter);
+app.use('/PersonalDetail',PersonalDetailRouter);
 
 
 // catch 404 and forward to error handler
