@@ -7,7 +7,7 @@
             let CiD = e.target.dataset.cid
             // $(e.target).parent().remove()
             console.log(e.target);
-            
+
             $.ajax({
                 url: "/all/all.jsp",
                 type: 'get',
@@ -25,13 +25,15 @@
     $.ajax({
         url: "/all/all.php",
         type: 'get',
-        data:{ruid:userId},
+        data: {
+            ruid: userId
+        },
         success: function (res) {
             // console.log(res[0]);
             let sum = 0
             for (var i = 0; i < res.length; i++) {
                 // console.log(res[i]);
-                
+
                 if (res[i].Uid == userId) {
 
                     sum = parseInt(sum) + parseInt(res[i].Ppri)
@@ -51,7 +53,7 @@
             </ul>
                 `
                 }
-            
+
             }
         }
 
