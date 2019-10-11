@@ -71,7 +71,6 @@ $('.btn-biglarge').on('click', function () {
     
     <li>${vers}<span>${vers_price}元 </span></li>
     <li class="totlePrice" data-name="seckill"> 总价 ：${vers_price}元 </li>
-
     `
     $('.pro-list').find('.verul').html(str)
 })
@@ -111,10 +110,9 @@ $('.buy').on('click', function () {
             })
             prizeBox.innerText = `已成功加入购物车`
             document.body.appendChild(prizeBox)
-            prizeBox.onclick = function () {
+            var timer=setInterval(function(){
                 document.body.removeChild(prizeBox)
-            }
-
+            },2000)
         }
     })
 })
