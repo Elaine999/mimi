@@ -1,6 +1,6 @@
 let phoneBox = document.querySelector(".phoneBox")
 let payBox = document.querySelector(".payBox")
-
+let carTips = document.querySelector(".carTips")
 
 $("body").click(function (e) {
     if (e.target.className == "del") {
@@ -14,6 +14,7 @@ $("body").click(function (e) {
                 cid: CiD,
             },
             success: function (res) {
+                window.location.href = 'http://127.0.0.1:3000/car'
                 console.log(res);
             }
         })
@@ -51,7 +52,7 @@ $("body").click(function (e) {
                 }
                 setTimeout(function () {
                     window.location.href = 'http://127.0.0.1:3000/all'
-                },2000)
+                }, 2000)
             }
 
         })
@@ -71,7 +72,9 @@ $.ajax({
             // console.log(res[i]);
 
             if (res[i].Uid == userId) {
-
+                if(document.querySelector(".carTips")){
+                    phoneBox.removeChild(carTips)
+            }
                 sum = parseInt(sum) + parseInt(res[i].Ppri)
                 phoneBox.innerHTML += `
                 <ul>
