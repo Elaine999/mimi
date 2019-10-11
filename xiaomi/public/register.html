@@ -14,11 +14,12 @@
         <a class="regHeader" href="index.html"></a>
         <h1>注册小米帐号</h1>
         <form action="/reg/reg.jsp" method="POST" name="regTable" class="formBox">
-            <div class="formBox">
+            <div class="formBox" style="position: relative">
                 请输入邮箱<br>
-                <input class="eMail" type="email" name="eMail"><br>
+                <input class="eMail" type="email" name="eMail"><span class="tips2"></span><br>
                 请输入密码<br>
-                <input class="regPwd" type="password" name="regPwd"><br>
+                <input class="regPwd" type="password" name="regPwd"><span class="tips"></span><br>
+
                 请输入验证码<br>
                 <input type="text" class="code" name="code"><button type="button" class="codeBtn">获取验证码</button><br>
                 <input class="subBtn" type="button" value="立即注册">
@@ -30,24 +31,93 @@
         <p>简体| 繁体| English |常见问题</p>
         <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
     </footer>
-<script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
+    <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
     <script>
         let code = $('.code')
         let eMail = $(".eMail")
-        let setTime=null
+        let setTime = null
+        let tips = document.querySelector(".tips")
+        let tips2 = document.querySelector(".tips2")
+        let regPwd= document.querySelector(".regPwd")
+        let eMails =document.querySelector(".eMail")
+        // console.log($(".regPwd").val());
+        
+        // 邮箱正则
+        
+        eMails.onfocus = function () {
+            //判断文本框是否为默认的内容
+            if (tips2.innerText = "请输入正确邮箱") {
+                //清空文本框                
+                tips2.innerText = "";
+                //重新设置字体颜色
+                tips2.style.color = "black";
+            }
+        };
+        // 注册失去焦点的事件
+        eMails.onblur = function () {
+            //判断文本框是否有内容
+            let reg =/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            console.log(reg.test(eMails.value))
+            console.log(eMails.value)
+            
+            if (!reg.test(eMails.value)) {
+                tips2.innerText = "请输入正确邮箱";
+                tips2.style.color = "red";
+                tips2.style.position="absolute";
+                tips2.style.right = "-130px"
+                tips2.style.top = "40px"
+                tips2.style.fontSize = "14px"
+            }
+        };
+
+        // 密码正则
+        regPwd.onfocus = function () {
+            //判断文本框是否为默认的内容
+            if (tips.innerText = "密码：(最少6位，至少包括一个大写字母、一个小写字母、一个数字、一个特殊字符)") {
+                //清空文本框                
+                tips.innerText = "";
+                //重新设置字体颜色
+                tips.style.color = "black";
+            }
+        };
+        // 注册失去焦点的事件
+        regPwd.onblur = function () {
+            //判断文本框是否有内容
+            let reg =/^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9~!@&%#_]{8,16}$/;
+            console.log(reg.test(regPwd.value))
+            console.log(regPwd.value)
+            
+            if (!reg.test(regPwd.value)) {
+                tips.innerHTML = "密码：必须包含一个大写，一个小<br>写字母，且长度为8到16位";
+                tips.style.color = "red";
+                tips.style.position="absolute";
+                tips.style.right = "-243px"
+                tips.style.top = "117px"
+                tips.style.fontSize = "14px"
+            }
+        };
+
+        // if (!reg.test($(".regPwd").val())) {
+        //     // element.classList.add('warning')
+        //     element.value = ''
+        //     element.placeholder = '密码格式错误，请检查！'
+        // }
+
+
+
         $('.codeBtn').on('click', function () {
 
-            var intime=60
-            setTime= setInterval(function(){
-                        $('.codeBtn').html(`剩余时间${intime}`)
-                        // console.log(intime);
-                        intime--
-                        if(intime==0){
-                        $('.codeBtn').html(`请重新获取`)
-                        clearInterval(setTime)
-                        }
-                    },1000)
-                    
+            var intime = 60
+            setTime = setInterval(function () {
+                $('.codeBtn').html(`剩余时间${intime}`)
+                // console.log(intime);
+                intime--
+                if (intime == 0) {
+                    $('.codeBtn').html(`请重新获取`)
+                    clearInterval(setTime)
+                }
+            }, 1000)
+
             console.log(111);
             $.ajax({
                 url: '/reg/getcode.php',
@@ -58,8 +128,8 @@
                 },
                 success(res) {
                     data = res
-                   
-                    
+
+
                 }
             })
         })
@@ -85,7 +155,7 @@
                             position: "absolute",
                             top: "50%",
                             left: "50%",
-                            transform:" translate(-50%, -50%)"
+                            transform: " translate(-50%, -50%)"
                         }
                         )
                         prizeBox.innerText = `验证码错误，请检查`

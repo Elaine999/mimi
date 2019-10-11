@@ -28,10 +28,13 @@ a{
     width: 1226px;
     margin: 0 auto;
 }
+.review h2{
+    padding: 10px 0 10px 5px;
+}
 .discuss{
     width: 1170px;
     background-color: #fff;
-    padding: 28px;
+    padding: 18px;
 }
 .discuss .dis-head{
     position: relative;
@@ -50,26 +53,38 @@ a{
     width: 47px;
     height: 47px;
 }
+.discuss p{
+    color: #616161;
+}
 .dis-head .head-name,.head-time,.dis-body{
     margin-left: 88px;
     color: #b0b0b0;
+}
+.dis-head .head-name{
+    color: #8d665a
+}
+.dis-head .head-time{
+    margin-top: 5px;
 }
 .dis-head .head-name a{
     color: #8d665a;
 }
 .dis-body{
     width: 900px;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .dis-body .dis-img img{
     max-width: 450px;
 }
 .dis-body .ope{
+    padding-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 .dis-body .ope a{
     display: block;
+    margin-right: 15px;
+    color: #999;
 }
 section {
     padding-bottom: 30px;

@@ -4,7 +4,6 @@ var db=require('./../utils/db.js');
 
 router.post('/345',function(req,res){
     let baseimg=req.body.img;
-    console.log(baseimg,99999);
     let sql='UPDATE userdetails SET Avatar=? WHERE UID=?'
     db.dbConnect(sql,[baseimg,req.session.uid],function(error,data){
         res.send(data);
@@ -28,8 +27,22 @@ router.get('/',function(req,res){
         Gender=data[0].Gender;
         Nickname=data[0].Nickname;
     }
-    console.log(Mobile,Email,9999999999)
     res.render('PersonalDetails.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid,mobile:Mobile,email:Email,avatar:Avatar,address:Address,gender:Gender,nickname:Nickname})        
+    })
+})
+
+
+router.post('/personalCenter.do',function(req,res){
+    let Mobile=req.body.phonenum;
+    let Email=req.body.emailinfo;
+    let gender=req.body.gender;
+    let Nickname=req.body.nickname;
+    let address = req.body.address;
+    let birdate = req.body.birdate;
+    let sql='update userdetails set Mobile=? , Email=? , Gender=? , nickname=? , Address=? , BirthDate=? where UID=?';
+    console.log(Mobile,Email,gender,Nickname,address,birdate);
+    db.dbConnect(sql,[Mobile,Email,gender,Nickname,address,birdate,req.session.uid],function(err,data){
+        res.send();
     })
 })
 module.exports = router;

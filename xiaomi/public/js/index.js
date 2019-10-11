@@ -162,7 +162,7 @@ $('.J_flashSaleList').mouseout(function () {
 //闪购时间渲染
 function timing() {
     var date = new Date();
-    var date2 = new Date(`${date.toLocaleDateString()} 14:00`);
+    var date2 = new Date(`${date.toLocaleDateString()} 18:00`);
     times = date2.getTime() - date.getTime();
     var hours = addZero(parseInt(times / 1000 / 60 / 60));
     var minutes = addZero(parseInt(times / 1000 / 60) - hours * 60);
