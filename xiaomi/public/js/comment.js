@@ -1,8 +1,4 @@
-console.log(pid);
 
-var string = '123T12354'
-var strin = string.split('T')[0]
-console.log(strin);
 window.onload = function () {
     $.ajax({
         url: '/com/search',

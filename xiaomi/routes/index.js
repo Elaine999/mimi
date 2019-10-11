@@ -9,11 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  // console.log(req.getHeader("referer"));
-  console.log(req.headers);
-  console.log(req.headers.referer,000000);
   req.session.url=req.headers.referer
-  console.log(req.session.url,4444);
   res.redirect('/login.html');
 })
 
@@ -59,11 +55,11 @@ router.get('/insertcar',function(req,res){
   let Uid=req.query.Uid
   let Pimg=req.query.Pimg
   let Ppri=req.query.Ppri
-  let sqlarr=[Pid,Uid,Pname,Ppri,Pimg]
-  let sql='insert into cartable(Pid,Uid,Pname,Ppri,Pimg) values(?,?,?,?,?)'
+  let Vers=req.query.Vers
+  let sqlarr=[Pid,Uid,Pname,Ppri,Pimg,Vers]
+  let sql='insert into cartable(Pid,Uid,Pname,Ppri,Pimg,Vers) values(?,?,?,?,?,?)'
   db.dbConnect(sql,sqlarr,function(err,data){
     // console.log(data);
-    
     res.render('car.ejs',{data,loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
   })
 })
