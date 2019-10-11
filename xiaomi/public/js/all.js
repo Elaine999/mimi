@@ -43,32 +43,29 @@
                     content: $('#comcontent').val()
                 },
                 success: function (res) {
-                    console.log(res.state);
-                    if (res.state) {
-                        let prizeBox = document.createElement("div")
-                        $(prizeBox).css({
-                            width: " 300px",
-                            height: "100px",
-                            background: "rgba(101, 101, 102, 0.4)",
-                            color: "#fff",
-                            fontSize: "20px",
-                            textAlign: "center",
-                            lineHeight: "100px",
-                            position: "fixed",
-                            top: "50%",
-                            left: "50%",
-                            marginLeft: '-150px',
-                            marginTop: '-50px'
-                        })
-                        prizeBox.innerText = `发布成功！`
-                        document.body.appendChild(prizeBox)
-                        prizeBox.onclick = function () {
-                            document.body.removeChild(prizeBox)
-                        }
-                        setTimeout(function () {
-                            $('.combox').remove()
-                        }, 700)
+                    let prizeBox = document.createElement("div")
+                    $(prizeBox).css({
+                        width: " 300px",
+                        height: "100px",
+                        background: "rgba(101, 101, 102, 0.4)",
+                        color: "#fff",
+                        fontSize: "20px",
+                        textAlign: "center",
+                        lineHeight: "100px",
+                        position: "fixed",
+                        top: "50%",
+                        left: "50%",
+                        marginLeft: '-150px',
+                        marginTop: '-50px'
+                    })
+                    prizeBox.innerText = `发布成功！`
+                    document.body.appendChild(prizeBox)
+                    prizeBox.onclick = function () {
+                        document.body.removeChild(prizeBox)
                     }
+                    setTimeout(function () {
+                        $('.combox').remove()
+                    }, 700)
                 }
             })
         }

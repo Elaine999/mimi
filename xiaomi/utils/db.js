@@ -6,7 +6,8 @@ module.exports = {
         port: 3306,
         user: 'root',
         password: 'hs6j58q',
-        database: 'level3_1'
+        database: 'level3_1',
+        dateStrings:true
     },
     dbConnect:function (sql, sqlArr, callBack) {
         var pool = mysql.createPool(this.config)

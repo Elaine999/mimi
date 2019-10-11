@@ -18,7 +18,7 @@ var db = require('./../utils/db.js');
 
 router.get('/search',function(req,res){
     let pid = req.query.pid;
-    let sql = `select * from comtable join userdetails on comtable.uid=userdetails.UID where comtable.pid=?`
+    let sql = `SELECT userdetails.Avatar,comtable.comid,comtable.pid,comtable.uid,comtable.content,comtable.likes,comtable.comdate,userdetails.nickname FROM comtable JOIN userdetails ON comtable.uid=userdetails.UID WHERE comtable.pid=?`
     let sqlArr = [pid]
     db.dbConnect(sql,sqlArr,function(err,data){
         console.log(data);
