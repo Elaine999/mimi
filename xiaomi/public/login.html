@@ -53,6 +53,25 @@
             if (res.url) {
               window.location.href = res.url
             } else {
+              let prizeBox = document.createElement("div")
+              $(prizeBox).css({
+                width: " 300px",
+                height: "100px",
+                background: "rgba(101, 101, 102, 0.4)",
+                color: "#fff",
+                fontSize: "20px",
+                textAlign: "center",
+                lineHeight: "100px",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: " translate(-50%, -50%)"
+              })
+              prizeBox.innerText = `正在跳转`
+              document.body.appendChild(prizeBox)
+              setTimeout(function () {
+                document.body.removeChild(prizeBox)
+              }, 2000)
               window.location.href = 'http://127.0.0.1:3000/'
             }
           } else {
@@ -69,31 +88,16 @@
               top: "50%",
               left: "50%",
               transform: " translate(-50%, -50%)"
-            }
-            )
+            })
             prizeBox.innerText = `登录失败,请检查`
             document.body.appendChild(prizeBox)
-            prizeBox.onclick = function () {
+            setTimeout(function () {
               document.body.removeChild(prizeBox)
-            }
+            }, 2000)
           }
         }
       })
     })
-    // window.onload = function () {
-    //   $.ajax({
-    //     url: 'com/insert',
-    //     type: 'post',
-    //     data: {
-    //       pid: 17,
-    //       uid: 2,
-    //       content: '我来自重庆'
-    //     },
-    //     success:function(res){
-    //       console.log(res);
-    //     }
-    //   })
-    // }
   </script>
 </body>
 

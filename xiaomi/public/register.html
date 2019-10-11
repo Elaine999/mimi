@@ -160,9 +160,9 @@
                         )
                         prizeBox.innerText = `验证码错误，请检查`
                         document.body.appendChild(prizeBox)
-                        prizeBox.onclick = function () {
+                        setTimeout(function () {
                             document.body.removeChild(prizeBox)
-                        }
+                        },2000) 
                     }
                 }
             })

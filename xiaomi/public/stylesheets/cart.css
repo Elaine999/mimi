@@ -5,6 +5,9 @@
 body {
   background: #f5f5f5;
 }
+.del{
+  cursor: pointer;
+}
 header {
   width: 1226px;
   height: 100px;
@@ -50,6 +53,25 @@ header .cart_logBox .reg {
   background-color: #f5f5f5;
   min-height: 500px;
   margin-bottom: 40px;
+}
+.cart_content .cart_data .content_header .carTipsP,
+.cart_content .cart_data .phoneBox .carTipsP {
+  width: 400px;
+  margin: 70px auto;
+  font-size: 36px;
+  text-align: center;
+}
+.cart_content .cart_data .content_header .carTo,
+.cart_content .cart_data .phoneBox .carTo {
+  display: block;
+  width: 170px;
+  height: 48px;
+  line-height: 48px;
+  border-color: #ff6700;
+  background: #ff6700;
+  color: #fff;
+  text-align: center;
+  margin: 0px auto;
 }
 .cart_content .cart_data .content_header ul,
 .cart_content .cart_data .phoneBox ul {

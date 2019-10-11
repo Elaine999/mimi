@@ -7,7 +7,7 @@ window.onload = function () {
             pid: pid
         },
         success: function (res) {
-            console.log(res);
+            $('.empty').remove()
             var str=''
             var dateday ='';
             var datetime='';
