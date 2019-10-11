@@ -11,18 +11,6 @@ a {
 body {
   background: #f5f5f5;
 }
-@font-face {
-  font-family: 'iconfont';
-  src: url('../font/zt_font_4m4q4w3zovp/iconfont.eot');
-  src: url('../font/zt_font_4m4q4w3zovp/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/zt_font_4m4q4w3zovp/iconfont.woff2') format('woff2'), url('../font/zt_font_4m4q4w3zovp/iconfont.woff') format('woff'), url('../font/zt_font_4m4q4w3zovp/iconfont.ttf') format('truetype'), url('../font/zt_font_4m4q4w3zovp/iconfont.svg#iconfont') format('svg');
-}
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 .siteTopbar {
   width: 100%;
   height: 40px;
