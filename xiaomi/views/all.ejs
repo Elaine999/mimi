@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/cart.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+    <link rel="stylesheet" href="stylesheets/head.css">
+
+</head>
+
+<body>
+        <%include template/header.ejs %>
+
+    <div class="cart_content">
+
+        <div class="cart_data">
+            <div class="content_header">
+                <ul>
+                    <li>全选</li>
+                    <li>&nbsp;</li>
+                    <li>商品名称</li>
+                    <li>单价</li>
+                    <li>数量</li>
+                    <li>小计</li>
+                    <li >操作</li>
+                </ul>
+            </div>
+            <div class="phoneBox">
+               
+            </div>
+        </div>
+    </div>
+
+        <!-- <h2>———————————————为您推荐———————————————</h2>
+        <div>
+            <ul class="cart_shop">
+
+            </ul>
+        </div> -->
+        <!-- </div> -->
+        <%include template/footer.ejs %>
+        <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+        <script>
+                var userId="<%= uid %>"
+            </script>
+        <script src="js/all.js"></script>
+    <script src="js/logout.js"></script>
+        
+</body>
+
+</html>
