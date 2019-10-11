@@ -34,9 +34,9 @@
   background: #424242;
   position: relative;
 }
-.siteTopbar .container .topbarCart:hover .J_miniCartMenu {
+/* .siteTopbar .container .topbarCart:hover .J_miniCartMenu {
   height: 100px;
-}
+} */
 .siteTopbar .container .topbarCart:hover a {
   color: #ff6700;
   background: #fff;

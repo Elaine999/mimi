@@ -44,7 +44,6 @@ router.post('/personalCenter.do',function(req,res){
     let address = req.body.address;
     let birdate = req.body.birdate;
     let sql='update userdetails set Mobile=? , Email=? , Gender=? , nickname=? , Address=? , BirthDate=? where UID=?';
-    console.log(Mobile,Email,gender,Nickname,address,birdate);
     db.dbConnect(sql,[Mobile,Email,gender,Nickname,address,birdate,req.session.uid],function(err,data){
         res.send();
     })

@@ -16,7 +16,6 @@ $("body").click(function (e) {
             },
             success: function (res) {
                 window.location.href = 'http://127.0.0.1:3000/car'
-                console.log(res);
             }
         })
     }
@@ -67,11 +66,8 @@ $.ajax({
         ruid: userId
     },
     success: function (res) {
-        // console.log(res[0]);
         let sum = 0
         for (var i = 0; i < res.length; i++) {
-            // console.log(res[i]);
-
             if (res[i].Uid == userId) {
                 if (document.querySelector(".carTips")) {
                     phoneBox.removeChild(carTips)
@@ -105,5 +101,4 @@ $.ajax({
             `
         }
     }
-
 })

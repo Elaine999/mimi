@@ -16,12 +16,10 @@ router.get('/getinfo', function (req, res) {
     let keyword = req.query.key;
     let str = 'saalf ajaj asja'
     let arr = str.split(' ')
-    console.log(arr, keyword, 999999);
     let sql = `SELECT * FROM productsinfo JOIN imglist ON productsinfo.PID=imglist.PID WHERE productsinfo.PName LIKE ? OR productsinfo.Abstract LIKE ?`
     let sqlArr = [`%${keyword}%`, `%${keyword}%`];
     db.dbConnect(sql, sqlArr, function (err, data) {
         if (err) {
-            console.log(err);
         }
         if (data.length > 0) {
             res.send({data,state:true});

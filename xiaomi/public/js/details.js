@@ -32,7 +32,6 @@ smallpoints.on('click', function () {
 
 })
 //自动播放
-//console.log(imgstatus);
 
 if (imgstatus == 1) {
     var timeId = setInterval(function () {
@@ -64,10 +63,7 @@ $('.btn-biglarge').on('click', function () {
     var str = ''
     $(this).addClass('active').siblings().removeClass('active')
     var vers = $('.active').find('.name').text()
-    //console.log(vers);
     var vers_price = $('.active').find('.price').text()
-    //console.log(vers);
-
     str += `
     
     <li>${vers}<span>${vers_price}元 </span></li>
@@ -94,6 +90,7 @@ $('.buy').on('click', function () {
             Vers: u_vers,
         },
         success: function (res) {
+            getcatnum()
             let prizeBox = document.createElement("div")
             $(prizeBox).css({
                 width: " 300px",
@@ -111,9 +108,9 @@ $('.buy').on('click', function () {
             })
             prizeBox.innerText = `已成功加入购物车`
             document.body.appendChild(prizeBox)
-            var timer=setInterval(function(){
+            setTimeout(function(){
                 document.body.removeChild(prizeBox)
-            },2000)
+            },1000)
         }
     })
 })
@@ -122,8 +119,4 @@ $('.buy').on('click', function () {
 $('.like').on('click', function () {
     $(this).find('i').toggleClass('redheart')
     var c=$('.redheart').css('color')
-    console.log(c);
-    
-    // localStorage.setItem('c',c)
-    // localStorage.getItem('c',c)
 })

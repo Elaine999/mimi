@@ -27,11 +27,9 @@ router.post("/reg.jsp", function (req, res, next) {
     let sql5 ="DELETE  FROM verCode"
     // 查询
     db.dbConnect(sql2, sqlARR2, function (err, data) {
-        console.log(data);
 
         if (data.length > 0) {
             db.dbConnect(sql, sqlARR, function (err, data) {
-                console.log(data);
 
                 db.dbConnect(sql3, sql3Arr, function (err, data) {
                     let sql4Arr = [data[0].uid, "img/user_defult.png", Email,`小米用户${parseInt(Math.random()*8000+1000)}`]
@@ -46,7 +44,6 @@ router.post("/reg.jsp", function (req, res, next) {
             })
             res.send("1")
         } else {
-            console.log("注册失败请检查");
             res.send({
                 sta: false
             })
@@ -94,10 +91,8 @@ router.post("/getcode.php", function (req, res, next) {
     // 插入
     db.dbConnect(sql1, sqlARR1, function (err, data) {
         if (err) {
-            console.log("失败");
             res.send("1")
         } else {
-            console.log("成功");
             res.send("2")
         }
     })

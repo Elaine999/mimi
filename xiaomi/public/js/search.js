@@ -1,12 +1,7 @@
-// import { log } from "util";
-
-// console.log(data);
-console.log($('#searchword').text());
 var keyword = $('#searchword').text();
 
 
 function getlist(kwd) {
-    console.log(kwd);
     $.ajax({
         url: '/search_result/getinfo',
         data: {

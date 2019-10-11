@@ -21,7 +21,6 @@ router.get('/search',function(req,res){
     let sql = `SELECT userdetails.Avatar,comtable.comid,comtable.pid,comtable.uid,comtable.content,comtable.likes,comtable.comdate,userdetails.nickname FROM comtable JOIN userdetails ON comtable.uid=userdetails.UID WHERE comtable.pid=?`
     let sqlArr = [pid]
     db.dbConnect(sql,sqlArr,function(err,data){
-        console.log(data);
         if (err) {
             res.send({state:false,mas:'服务器错误'})
         }

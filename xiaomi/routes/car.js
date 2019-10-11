@@ -14,8 +14,6 @@ router.get('/car.php', function (req, res, next) {
   let sql = 'select * from cartable where Uid =?';
   db.dbConnect(sql, sqlArr, function (err, data) {
     res.send(data);
-    console.log(data);
-
   })
 })
 // 点击删除
@@ -26,14 +24,11 @@ router.get('/car.jsp', function (req, res, next) {
 
   db.dbConnect(sql, sqlarr, function (err, data) {
     res.send(data);
-    console.log(data.length,99999999999999999999999999999999999);
-
   })
 })
 // 点击结算
 router.get('/car.asp', function (req, res, next) {
   let sqlArr = [req.query.ruid]
-  console.log(sqlArr);
   let sqlS = "SELECT * FROM cartable WHERE Uid=?"
   let sqlD = 'DELETE  FROM cartable where Uid=? ';
   let sqlI = 'INSERT INTO indtable (pid,uid,pname,pimg,ppri,cid,vers) VALUES (?,?,?,?,?,?,?)';
