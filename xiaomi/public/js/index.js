@@ -99,13 +99,11 @@ new move();
 $('#text').focus(function () {
     $('#text').css({ borderColor: '#ff7600' });
     $('.search_btn').css({ borderColor: '#ff7600' });
-    $('.search_hot_words').hide();
     $('.J_keywordList').show();
 })
 $('#text').blur(function () {
     $('#text').css({ borderColor: 'rgb(224, 224, 224)' });
     $('.search_btn').css({ borderColor: 'rgb(224, 224, 224)' });
-    $('.search_hot_words').show();
     $('.J_keywordList').hide();
 })
 

@@ -16,8 +16,7 @@ a{
     line-height: 28px;
     background-color: #ff6700;
     margin-left: 5px;
-    
-    border-color: #ff6700;
+    border: none;
     outline: none;
 }
 .product-nav .pro-about button a{
