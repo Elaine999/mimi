@@ -119,8 +119,8 @@ $('.buy').on('click', function () {
 //喜欢的 点击事件
 $('.like').on('click', function () {
     $(this).find('i').toggleClass('redheart')
-    var c=$('.redheart').css('color')
-    console.log(c);
+    // var c=$('.redheart').css('color')
+    // console.log(c);
     
     // localStorage.setItem('c',c)
     // localStorage.getItem('c',c)
