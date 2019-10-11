@@ -209,7 +209,3 @@ $('.ensure').on('click',function(){
 })
 
 
-window.onload=function(){
-    let date2=new Date();
-    conso
-}
