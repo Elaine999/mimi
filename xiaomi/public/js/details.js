@@ -124,7 +124,6 @@ $('.like').on('click', function () {
     var c=$('.redheart').css('color')
     console.log(c);
     
-    localStorage.setItem('c',c)
-    localStorage.getItem('c',c)
-    //location.reload('true')
+    // localStorage.setItem('c',c)
+    // localStorage.getItem('c',c)
 })
