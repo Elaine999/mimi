@@ -42,7 +42,7 @@ for (var i = 0; i < inputs.length; i++) {
             if (email_pattern.test(email_value) == true) {
                 b_email.innerHTML = `<i class="icon-gou"></i>`;
                 b_email.style.color = "#0F0";
-                ensure.setAttribute("disabled","enabled");
+                ensure.removeAttribute("disabled");
                 $(ensure).css({background:'#ff7600',border:'1px solid #ff7600',cursor:'default'})
             } else {
                 b_email.innerHTML = `<i class="icon-chahao"></i>`;
@@ -61,7 +61,7 @@ for (var i = 0; i < inputs.length; i++) {
             if (tel_pattern.test(tel_value) == true) {
                 b_tel.innerHTML = `<i class="icon-gou"></i>`;
                 b_tel.style.color = "#0F0";
-                ensure.setAttribute("disabled","enabled");
+                ensure.removeAttribute("disabled");
                 $(ensure).css({background:'#ff7600',border:'1px solid #ff7600',cursor:'default'})
             } else {
                 b_tel.innerHTML = `<i class="icon-chahao"></i>`;
@@ -207,3 +207,5 @@ $('.ensure').on('click',function(){
         }
     })
 })
+
+

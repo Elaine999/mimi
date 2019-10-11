@@ -1,197 +1,229 @@
 @import url(//at.alicdn.com/t/font_1452026_65uclu1k9sn.css);
 .siteTopbar {
-    width: 100%;
-    height: 40px;
-    background: #333333;
-    line-height: 40px;
-  }
-  .siteTopbar .container {
-    width: 1226px;
-    height: 100%;
-    margin: 0 auto;
-    color: #b0b0b0;
-    font-size: 12px;
-  }
-  .siteTopbar .container .topbarNav {
-    float: left;
-  }
-  .siteTopbar .container .topbarNav span {
-    color: #424242;
-    margin: 0px 3.6px;
-  }
-  .siteTopbar .container .topbarNav a {
-    color: #b0b0b0;
-    font-size: 12px;
-  }
-  .siteTopbar .container .topbarNav a:hover {
-    color: white;
-  }
-  .siteTopbar .container .topbarCart {
-    width: 120px;
-    height: 40px;
-    margin-left: 15px;
-    float: right;
-    background: #424242;
-    position: relative;
-  }
-  .siteTopbar .container .topbarCart:hover .J_miniCartMenu {
-    height: 100px;
-  }
-  .siteTopbar .container .topbarCart:hover a {
-    color: #ff6700;
-    background: #fff;
-  }
-  .siteTopbar .container .topbarCart a {
-    text-align: center;
-    display: block;
-    width: 120px;
-    height: 40px;
-    color: #b0b0b0;
-    position: relative;
-    z-index: 5;
-  }
-  .siteTopbar .container .topbarCart .J_miniCartMenu {
-    width: 316px;
-    height: 0px;
-    background: white;
-    position: absolute;
-    top: 40px;
-    right: 0px;
-    overflow: hidden;
-    transition: all .3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    color: #424242;
-    z-index: 4;
-  }
-  .siteTopbar .container .topbarCart .J_miniCartMenu .menu_content {
-    padding-top: 10px;
-  }
-  .siteTopbar .container .topbarCart .J_miniCartMenu .menu_content .msg_empty {
-    text-align: center;
-    padding: 20px 0px;
-    margin: 0px 20px 10px;
-  }
-  .siteTopbar .container .topbarInfo {
-    float: right;
-  }
-  .siteTopbar .container .topbarInfo a {
-    color: #b0b0b0;
-    padding: 0 5px;
-  }
-  .siteTopbar .container .topbarInfo span {
-    color: #424242;
-  }
-  .siteTopbar .container .topbarInfo a:hover {
-    color: white;
-    cursor: pointer;
-  }
-  .siteHeader {
-    width: 100%;
-    height: 100px;
-    background: white;
-  }
-  .siteHeader .container {
-    width: 1226px;
-    height: 100px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .siteHeader .container .headerLogo {
-    width: 62px;
-    height: 55px;
-    margin-top: 22px;
-    float: left;
-  }
-  .siteHeader .container .headerLogo a {
-    height: 55px;
-    width: 55px;
-    display: block;
-    background: url(http://s02.mifile.cn/assets/static/image/mi-logo.png) #ff6700 50% 50%;
-  }
-  .siteHeader .container .headerNav {
-    float: left;
-    height: 100px;
-  }
-  .siteHeader .container .headerNav ul {
-    padding-top: 12px;
-    padding-left: 30px;
-    height: 100px;
-    box-sizing: border-box;
-  }
-  .siteHeader .container .headerNav ul .navCategory {
-    width: 127px;
-    height: 88px;
-    padding: 0px 15px 0px 0px;
-    box-sizing: border-box;
-  }
-  .siteHeader .container .headerNav ul li {
-    padding: 26px 10px 38px 10px;
-    float: left;
-  }
-  .siteHeader .container .headerNav ul li a {
-    display: block;
-    color: #333333;
-  }
-  .siteHeader .container .headerNav ul li a:hover {
-    color: #ff6700;
-  }
-  .siteHeader .container .headerSearch {
-    float: right;
-    width: 296px;
-    height: 50px;
-    margin-top: 25px;
-    font-size: 0px;
-  }
-  .siteHeader .container .headerSearch form {
-    width: 296px;
-    height: 50px;
-    position: relative;
-  }
-  .siteHeader .container .headerSearch form #search {
-    top: 0;
-    position: absolute;
-    width: 245px;
-    height: 50px;
-    padding: 0 10px;
-    border: 1px solid #e0e0e0;
-    outline: 0;
-  }
-  .siteHeader .container .headerSearch form .search_hot_words {
-    position: absolute;
-    top: 16px;
-    right: 62px;
-    text-align: right;
-    transition: opacity .2s;
-  }
-  .siteHeader .container .headerSearch form .search_hot_words a {
-    display: inline-block;
-    margin-left: 5px;
-    padding: 0 5px;
-    font-size: 12px;
-    background: #eee;
-    color: #757575;
-    transition: all .2s;
-  }
-  .siteHeader .container .headerSearch form .search_hot_words a:hover {
-    background: #ff6700;
-    color: white;
-  }
-  .siteHeader .container .headerSearch form .search_btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    width: 52px;
-    height: 50px;
-    font-size: 24px;
-    line-height: 24px;
-    background: #fff;
-    color: #616161;
-    outline: 0;
-    border: 1px solid #e0e0e0;
-    cursor: pointer;
-  }
-  .siteHeader .container .headerSearch form .search_btn:hover {
-    background: #ff6700;
-    color: white;
-  }
+  width: 100%;
+  height: 40px;
+  background: #333333;
+  line-height: 40px;
+}
+.siteTopbar .container {
+  width: 1226px;
+  height: 100%;
+  margin: 0 auto;
+  color: #b0b0b0;
+  font-size: 12px;
+}
+.siteTopbar .container .topbarNav {
+  float: left;
+}
+.siteTopbar .container .topbarNav span {
+  color: #424242;
+  margin: 0px 3.6px;
+}
+.siteTopbar .container .topbarNav a {
+  color: #b0b0b0;
+  font-size: 12px;
+}
+.siteTopbar .container .topbarNav a:hover {
+  color: white;
+}
+.siteTopbar .container .topbarCart {
+  width: 120px;
+  height: 40px;
+  margin-left: 15px;
+  float: right;
+  background: #424242;
+  position: relative;
+}
+.siteTopbar .container .topbarCart:hover .J_miniCartMenu {
+  height: 100px;
+}
+.siteTopbar .container .topbarCart:hover a {
+  color: #ff6700;
+  background: #fff;
+}
+.siteTopbar .container .topbarCart a {
+  text-align: center;
+  display: block;
+  width: 120px;
+  height: 40px;
+  color: #b0b0b0;
+  position: relative;
+  z-index: 5;
+}
+.siteTopbar .container .topbarCart .J_miniCartMenu {
+  width: 316px;
+  height: 0px;
+  background: white;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  overflow: hidden;
+  transition: all .3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  color: #424242;
+  z-index: 10;
+}
+.siteTopbar .container .topbarCart .J_miniCartMenu .menu_content {
+  padding-top: 10px;
+}
+.siteTopbar .container .topbarCart .J_miniCartMenu .menu_content .msg_empty {
+  text-align: center;
+  padding: 20px 0px;
+  margin: 0px 20px 10px;
+}
+.siteTopbar .container .topbarInfo {
+  float: right;
+}
+.siteTopbar .container .topbarInfo a {
+  color: #b0b0b0;
+  padding: 0 5px;
+}
+.siteTopbar .container .topbarInfo span {
+  color: #424242;
+}
+.siteTopbar .container .topbarInfo a:hover {
+  color: white;
+  cursor: pointer;
+}
+.siteHeader {
+  width: 100%;
+  height: 100px;
+  background: white;
+  position: relative;
+}
+.siteHeader .container {
+  width: 1226px;
+  height: 100px;
+  margin: 0 auto;
+}
+.siteHeader .container .headerLogo {
+  width: 62px;
+  height: 55px;
+  margin-top: 22px;
+  float: left;
+}
+.siteHeader .container .headerLogo a {
+  height: 55px;
+  width: 55px;
+  display: block;
+  background: url(http://s02.mifile.cn/assets/static/image/mi-logo.png) #ff6700 50% 50%;
+}
+.siteHeader .container .headerNav {
+  float: left;
+  height: 100px;
+}
+.siteHeader .container .headerNav ul {
+  padding-top: 12px;
+  padding-left: 30px;
+  height: 100px;
+  box-sizing: border-box;
+}
+.siteHeader .container .headerNav ul .navCategory {
+  width: 127px;
+  height: 88px;
+  padding: 0px 15px 0px 0px;
+  box-sizing: border-box;
+}
+.siteHeader .container .headerNav ul li {
+  padding: 26px 10px 38px 10px;
+  float: left;
+}
+.siteHeader .container .headerNav ul li a {
+  display: block;
+  color: #333333;
+}
+.siteHeader .container .headerNav ul li a:hover {
+  color: #ff6700;
+}
+.siteHeader .container .headerSearch {
+  float: right;
+  width: 296px;
+  height: 50px;
+  margin-top: 25px;
+  font-size: 0px;
+}
+.siteHeader .container .headerSearch form {
+  width: 296px;
+  height: 50px;
+  position: relative;
+}
+.siteHeader .container .headerSearch form #text {
+  top: 0;
+  position: absolute;
+  width: 244px;
+  height: 50px;
+  padding: 0 10px;
+  border: 1px solid #e0e0e0;
+  outline: 0;
+}
+.siteHeader .container .headerSearch form .search_hot_words {
+  position: absolute;
+  top: 16px;
+  right: 62px;
+  text-align: right;
+  transition: opacity .2s;
+}
+.siteHeader .container .headerSearch form .search_hot_words a {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0 5px;
+  font-size: 12px;
+  background: #eee;
+  color: #757575;
+  transition: all .2s;
+}
+.siteHeader .container .headerSearch form .search_hot_words a:hover {
+  background: #ff6700;
+  color: white;
+}
+.siteHeader .container .headerSearch form .search_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 52px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 24px;
+  background: #fff;
+  color: #616161;
+  outline: 0;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+.siteHeader .container .headerSearch form .search_btn:hover {
+  background: #ff6700;
+  color: white;
+}
+.siteHeader .container .headerSearch form .J_keywordList {
+  background: #fff;
+  width: 243px;
+  height: 300px;
+  border: 1px solid #ff6700;
+  position: absolute;
+  top: 49px;
+  left: 0px;
+  display: none;
+  z-index: 8;
+}
+.siteHeader .container .headerSearch form .J_keywordList .result-list {
+  height: 300px;
+}
+.siteHeader .container .headerSearch form .J_keywordList .result-list li {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.siteHeader .container .headerSearch form .J_keywordList .result-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.siteHeader .container .headerSearch form .J_keywordList .result-list li a {
+  color: #333;
+  display: block;
+}
+.siteHeader .container .headerSearch form .J_keywordList .result-list li a span {
+  display: block;
+  width: 243px;
+  height: 300px;
+}

@@ -11,24 +11,28 @@ router.post('/345',function(req,res){
 })
 
 router.get('/',function(req,res){
-    let sql='select Mobile,Email,Avatar,Gender,Nickname from userdetails where uid= ?';
-    let Mobile=null;
-    let Email=null;
-    let Avatar=null;
-    let Address=null;
-    let Gender=1;
-    let Nickname=null;
-    db.dbConnect(sql,[req.session.uid],function(err,data){
-    if(data.length>0){
-        Mobile=data[0].Mobile;
-        Email=data[0].Email;
-        Avatar=data[0].Avatar;
-        Address=data[0].Address;
-        Gender=data[0].Gender;
-        Nickname=data[0].Nickname;
+    if(req.session.loginState){
+        let sql='select Mobile,Email,Avatar,Gender,Nickname from userdetails where uid= ?';
+        let Mobile=null;
+        let Email=null;
+        let Avatar=null;
+        let Address=null;
+        let Gender=1;
+        let Nickname=null;
+        db.dbConnect(sql,[req.session.uid],function(err,data){
+        if(data.length>0){
+            Mobile=data[0].Mobile;
+            Email=data[0].Email;
+            Avatar=data[0].Avatar;
+            Address=data[0].Address;
+            Gender=data[0].Gender;
+            Nickname=data[0].Nickname;
+        }
+        res.render('PersonalDetails.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid,mobile:Mobile,email:Email,avatar:Avatar,address:Address,gender:Gender,nickname:Nickname})        
+        })
+    }else{
+        res.render('index.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
     }
-    res.render('PersonalDetails.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid,mobile:Mobile,email:Email,avatar:Avatar,address:Address,gender:Gender,nickname:Nickname})        
-    })
 })
 
 
