@@ -194,7 +194,7 @@ $('.ensure').on('click',function(){
         type:'post',
         data:$('#detailsform').serialize(),
         success:function(res){
-            window.location.href="http://127.0.0.1:3000/PersonalCenter";
+            // window.location.href="http://127.0.0.1:3000/PersonalCenter";
         }
     })
 })
