@@ -14,6 +14,7 @@ var comRouter = require('./routes/com');
 var carRouter = require('./routes/car');
 var allRouter = require('./routes/all');
 var PersonalDetailRouter=require('./routes/PersonalDetail');
+var personalCenterRouter=require('./routes/personalCenter')
 
 var app = express();
 
@@ -44,6 +45,7 @@ app.use('/com',comRouter)
 app.use('/car',carRouter);
 app.use('/all',allRouter);
 app.use('/PersonalDetail',PersonalDetailRouter);
+app.use('/personalCenter',personalCenterRouter);
 
 
 // catch 404 and forward to error handler
