@@ -22,9 +22,9 @@ window.onload = function () {
                     <div class="dis-body">
                         <p class="dis-text">${res.data[i].content}</p>
                         <div class="ope">
-                                <a href="javascript:void(0);"><i>99</i> ${res.data[i].likes}点赞</a>
-                                <a href="javascript:void(0);"><i>88</i>评论</a>
-                                <a href="javascript:void(0);"><i>77</i>分享</a >
+                                <a href="javascript:void(0);"><i class="icon-good_active-copy"></i> ${res.data[i].likes}点赞</a>
+                                <a href="javascript:void(0);"><i class="icon-pinglun"></i>评论</a>
+                                <a href="javascript:void(0);"><i class="icon-zhuanfa"></i>分享</a >
                         </div>
                     </div>
                     </div>`
