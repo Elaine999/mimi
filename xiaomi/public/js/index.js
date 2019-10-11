@@ -216,3 +216,16 @@ function a(item, j, id) {
     $(`.brick-item-m-${j} del`).eq(id).text(item.CostpPrice)
     $(`.brick-item-m-${j} .desc`).eq(id).text(item.details)
 }
+
+
+// 个人中心
+// $('.uid').on('click',function(e){
+//     e.preventDefault();
+//     $.ajax({
+//         type:'post',
+//         url:'/personalCenter/personalCenter.jsp',
+//         success:function(res){
+
+//         }
+//     })
+// })
