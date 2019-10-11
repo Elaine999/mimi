@@ -76,7 +76,7 @@ $('.buy').on('click',function(){
     //var u_vers=$('.active').find('.name').text()
     var u_verprice=$('.active').find('.price').text()
     var u_img=$('.f1').find('img').attr('src')
-    var u_id=$('.uid').text()
+    var u_id=userId
     $.ajax({
         type:'get',
         url:'/insertcar',
@@ -111,4 +111,8 @@ $('.buy').on('click',function(){
             
         }
     })
+})
+//喜欢的 点击事件
+$('.like').on('click',function(){
+    $(this).find('i').toggleClass('redheart')
 })

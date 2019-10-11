@@ -8,6 +8,10 @@ router.get('/', function(req, res, next) {
   res.render('index', {loginState:req.session.loginState,username:req.session.username,uid:req.session.uid});
 });
 
+router.get('/login', function(req, res, next) {
+  req.session.url=req.headers.referer
+  res.redirect('/login.html');
+})
 
 //主页数据调用
 router.get('/123',function(req,res){
@@ -44,7 +48,7 @@ router.get('/comment',function(req,res){
     
   })
 })
-
+//添加信息到购物车
 router.get('/insertcar',function(req,res){
   let Pid=req.query.Pid
   let Pname=req.query.Pname
