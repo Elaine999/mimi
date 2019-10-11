@@ -7,13 +7,11 @@ window.onload = function () {
             pid: pid
         },
         success: function (res) {
-            console.log(res);
             var str=''
             var dateday ='';
             var datetime='';
             for (let i = 0; i < res.data.length; i++) {
                 dateday=res.data[i].comdate.split('T')[0]
-                // console.log(res.data[i].comdate.split('T')[1].split('.')[0]);
                 datetime=res.data[i].comdate.split('T')[1].split('.')[0] 
                 str+=`<div class="discuss">
                 <div class="dis-head">

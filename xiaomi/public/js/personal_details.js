@@ -99,15 +99,15 @@ $('.tip_btns .a2').on('click',function(){
 
         /** @type {HTMLCanvasElement} */
         var canvasNode = document.createElement('canvas')
-        canvasNode.width = 200;
-        canvasNode.height = 200;
+        canvasNode.width = 100;
+        canvasNode.height = 100;
         var cvs = canvasNode.getContext('2d')
         /** @type {HTMLCanvasElement} */
         var mycanvas = document.createElement('canvas')
         mycanvas.width = parseInt(imgBox.css('width'))
         mycanvas.height = parseInt(imgBox.css('height'))
         var ctx = mycanvas.getContext('2d')
-
+        var imgbase = '';
         fileInput.onchange = function (e) {
             gray.css('display', 'none')
             file = fileInput.files[0];
@@ -132,7 +132,7 @@ $('.tip_btns .a2').on('click',function(){
                 /* 通过一个和imgBox一样大的canvas去获取当前显示区域的img信息，显示在与显示区域一样大的另一个canvas中 */
                 ctx.clearRect(0, 0, 300, 300)
                 ctx.drawImage(img, positionX, positionY, scaleWidth, scaleHeight)
-                var date = ctx.getImageData(50, 50, 200, 200)
+                var date = ctx.getImageData(100, 100, 100, 100)
                 cvs.putImageData(date, 0, 0);
             }
             box.onmousewheel = function (e) {
@@ -166,7 +166,7 @@ $('.tip_btns .a2').on('click',function(){
                         positionX = parseInt(imgBox.css('backgroundPositionX'))
                         positionY = parseInt(imgBox.css('backgroundPositionY'))
                         drewCanvas()
-
+                        imgbase=canvasNode.toDataURL()
                         img1.attr('src', canvasNode.toDataURL())
                         img2.attr('src', canvasNode.toDataURL())
                         img3.attr('src', canvasNode.toDataURL())
@@ -175,14 +175,16 @@ $('.tip_btns .a2').on('click',function(){
                 }
             }
         }
+        
+        
         $('#confirm').on('click',function(){
             $.ajax({
-                type:'get',
+                type:'post',
                 url:'PersonalDetail/345',
-                data:{img:canvasNode.toDataURL()},
+                data:{img:imgbase},
                 success:function(res){
-                     console.log(res);
+                    //  console.log(res);
                 }
             })
-            
+            $('.popup_mask').hide();
         })

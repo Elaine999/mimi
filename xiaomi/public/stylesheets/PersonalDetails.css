@@ -329,8 +329,8 @@ h4 {
 
 .background {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   box-shadow: 0 0 0 300px rgba(0, 0, 0, .5);
   top: 50%;
