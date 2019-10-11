@@ -73,7 +73,7 @@ $('.btn-biglarge').on('click',function(){
 //携带产品信息添加到数据库
 $('.buy').on('click',function(){
     var pname=$('.pro-list').find('h4').text()
-    //var u_vers=$('.active').find('.name').text()
+    var u_vers=$('.active').find('.name').text()
     var u_verprice=$('.active').find('.price').text()
     var u_img=$('.f1').find('img').attr('src')
     var u_id=userId
@@ -86,6 +86,7 @@ $('.buy').on('click',function(){
             Uid:u_id,
             Pimg:u_img,
             Ppri:u_verprice,
+            Vers:u_vers,
         },
         success:function(res){
             let prizeBox = document.createElement("div")
