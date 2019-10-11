@@ -6,7 +6,7 @@ body {
   background: #f5f5f5;
 }
 header {
-  /* width: 1226px; */
+  width: 1226px;
   height: 100px;
   font-size: 12px;
   border-bottom: 2px solid #ff6700;
@@ -55,7 +55,7 @@ header .cart_logBox .reg {
 .cart_content .cart_data .phoneBox ul {
   display: grid;
   background: #fff;
-  grid-template-columns: repeat(6, 110px 120px 380px 158px 180px 201px 80px);
+  grid-template-columns: repeat(6, 30px 120px 380px 158px 180px 201px 80px);
   padding-top: 15px;
   align-items: center;
   border-bottom: 1px solid #f5f5f5;
