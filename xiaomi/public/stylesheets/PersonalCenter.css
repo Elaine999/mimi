@@ -1,15 +1,20 @@
+@import url(//at.alicdn.com/t/font_1452026_1tk4yky7u8k.css);
 * {
   margin: 0;
   padding: 0;
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('../ICONFONT/iconfont.eot');
-  src: url('../ICONFONT/iconfont.eot?#iefix') format('embedded-opentype'), url('../ICONFONT/iconfont.woff2') format('woff2'), url('../ICONFONT/iconfont.woff') format('woff'), url('../ICONFONT/iconfont.ttf') format('truetype'), url('../ICONFONT/iconfont.svg#iconfont') format('svg');
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/iconfont.woff2') format('woff2'),
+      url('../font/iconfont.woff') format('woff'),
+      url('../font/iconfont.ttf') format('truetype'),
+      url('../font/iconfont.svg#iconfont') format('svg');
 }
-.iconfont {
+i{
   font-family: "iconfont" !important;
-  font-style: normal;
+  font-style: normal;    
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
