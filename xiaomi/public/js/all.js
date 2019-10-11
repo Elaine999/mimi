@@ -92,7 +92,7 @@
                 <ul>
                 <li>&nbsp;</li>
                 <li><img style="height: 80px;width: 80px" src="${res[i].pimg}"></li>
-                <li> ${res[i].pname} </li>
+                <li> ${res[i].pname}（${res[i].vers}） </li>
                 <li> ${res[i].ppri}元</li>
                 <li class="inputBoxs">
                     <input type="button" value="-">

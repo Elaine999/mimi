@@ -77,7 +77,7 @@ $.ajax({
                 <ul>
                 <li>&nbsp;</li>
                 <li><img style="height: 80px;width: 80px" src="${res[i].Pimg}"></li>
-                <li> ${res[i].Pname} </li>
+                <li> ${res[i].Pname}（${res[i].Vers}） </li>
                 <li> ${res[i].Ppri}元</li>
                 <li class="inputBoxs">
                     <input type="button" value="-">
