@@ -1,13 +1,20 @@
     let phoneBox = document.querySelector(".phoneBox")
     let payBox = document.querySelector(".payBox")
-
+    let nodestr = `<div class="combox">
+                    <div class="comtext">
+                        <textarea name="comcontent" id="comcontent" placeholder="写点什么吧！" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="appbtn">
+                        <button id="cancel">取消</button>
+                        <button id="sub">发布</button>
+                    </div>
+                </div>`
 
     $("body").click(function (e) {
         if (e.target.className == "del") {
             let CiD = e.target.dataset.cid
-            // $(e.target).parent().remove()
             console.log(e.target);
-
+            $(nodestr).appendTo($('body'))
             $.ajax({
                 url: "/all/all.jsp",
                 type: 'get',
