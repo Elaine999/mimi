@@ -3,7 +3,7 @@ var router = express.Router();
 var db=require('./../utils/db.js');
 
 router.get('/',function(req,res){
-    if(req.session.loginState){
+    // if(req.session.loginState){
         let sql='select Mobile,Email,Avatar,Nickname from userdetails where uid= ?';
         let Mobile=null;
         let Email=null;
@@ -18,9 +18,9 @@ router.get('/',function(req,res){
         }
         res.render('PersonalCenter.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid,mobile:Mobile,email:Email,avatar:Avatar,nickname:Nickname})        
         })
-    }else{
-        res.render('index.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
-    }
+    // }else{
+    //     res.render('index.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
+    // }
     
 })
 

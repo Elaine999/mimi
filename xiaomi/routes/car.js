@@ -26,6 +26,7 @@ router.get('/car.jsp', function (req, res, next) {
 
   db.dbConnect(sql, sqlarr, function (err, data) {
     res.send(data);
+    console.log(data.length,99999999999999999999999999999999999);
 
   })
 })

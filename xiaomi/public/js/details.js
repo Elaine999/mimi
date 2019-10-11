@@ -4,6 +4,7 @@ var len = swiperWrapperimg.length;//获取图片个数
 var smallpoints = $('.swiper_pagination_ul>li');//获取小圆点
 
 
+
 // 背景图片切换-上一张
 $('.swiper_button_prev').on('click', function () {
     index--;
@@ -116,6 +117,7 @@ $('.buy').on('click', function () {
         }
     })
 })
+
 //喜欢的 点击事件
 $('.like').on('click', function () {
     $(this).find('i').toggleClass('redheart')
