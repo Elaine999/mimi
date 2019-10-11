@@ -10,8 +10,8 @@ router.get('/', function (req, res, next) {
 });
 router.get('/all.php', function (req, res, next) {
   let sqlArr = [req.query.ruid]
-
-  let sql = 'select * from cartable where Uid =?';
+  console.log(sqlArr);
+  let sql = 'select * from indtable where uid =?';
   db.dbConnect(sql, sqlArr, function (err, data) {
     res.send(data);
   })

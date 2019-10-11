@@ -13,28 +13,47 @@ router.post("/reg.jsp", function (req, res, next) {
     let codes = req.body.code
     // 插入
     let sql = "INSERT INTO useraccount(email,pwd,UserName) VALUES(?,?,?)"
-    let sqlARR = [Email, pwd,Email]
+    let sqlARR = [Email, pwd, Email]
 
-    // 查询
+    // 查询验证码
     let sql2 = "SELECT * FROM verCode WHERE email=? AND codes=?"
     let sqlARR2 = [Email, codes]
-
+    // 查询uid
+    let sql3 = "SELECT * FROM useraccount WHERE email = ?"
+    let sql3Arr = [Email]
+    // 插入信息表
+    let sql4 = "INSERT INTO userdetails (UID,Avatar,Email) VALUES (?,?,?)"
     // 查询
     db.dbConnect(sql2, sqlARR2, function (err, data) {
         console.log(data);
 
         if (data.length > 0) {
             db.dbConnect(sql, sqlARR, function (err, data) {
+                console.log(data);
+
+                db.dbConnect(sql3, sql3Arr, function (err, data) {
+                    let sql4Arr = [data[0].uid, "img/user_defult.png", Email]
+                    db.dbConnect(sql4, sql4Arr, function (err, data) {
+
+                    })
+                })
+
                 if (err) {
                     res.send("注册失败请检查啦啦啦")
+                    console.log(22222222);
+
                 } else {
                     res.send("注册成功")
+                    console.log(11111111);
+                    
                 }
             })
 
         } else {
             console.log("注册失败请检查");
-            res.send({sta:false})
+            res.send({
+                sta: false
+            })
 
         }
     })
