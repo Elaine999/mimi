@@ -42,7 +42,7 @@ for (var i = 0; i < inputs.length; i++) {
             if (email_pattern.test(email_value) == true) {
                 b_email.innerHTML = "&#xe502";
                 b_email.style.color = "#0F0";
-                ensure.setAttribute("disabled","enabled");
+                ensure.removeAttribute("disabled");
                 $(ensure).css({background:'#ff7600',border:'1px solid #ff7600',cursor:'default'})
             } else {
                 b_email.innerHTML = "&#xe504";
@@ -61,7 +61,7 @@ for (var i = 0; i < inputs.length; i++) {
             if (tel_pattern.test(tel_value) == true) {
                 b_tel.innerHTML = "&#xe502";
                 b_tel.style.color = "#0F0";
-                ensure.setAttribute("disabled","enabled");
+                ensure.removeAttribute("disabled");
                 $(ensure).css({background:'#ff7600',border:'1px solid #ff7600',cursor:'default'})
             } else {
                 b_tel.innerHTML = "&#xe504";
@@ -207,3 +207,9 @@ $('.ensure').on('click',function(){
         }
     })
 })
+
+
+window.onload=function(){
+    let date2=new Date();
+    conso
+}
