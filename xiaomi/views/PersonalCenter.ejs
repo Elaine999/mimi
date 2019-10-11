@@ -7,99 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人中心</title>
     <link rel="stylesheet" href="stylesheets/PersonalCenter.css">
-    <link rel="stylesheet" href="stylesheets/footer.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="stylesheets/head.css">
 </head>
 
 <body>
-    <div class="head">
-        <div class="content">
-            <div class="nav">
-                <a href="">小米商城</a>
-                <span class="line">|</span>
-                <a href="">MIUI</a>
-                <span class="line">|</span>
-                <a href="">loT</a>
-                <span class="line">|</span>
-                <a href="">云服务</a>
-                <span class="line">|</span>
-                <a href="">金融</a>
-                <span class="line">|</span>
-                <a href="">有品</a>
-                <span class="line">|</span>
-                <a href="">小爱开放平台</a>
-                <span class="line">|</span>
-                <a href="">企业团购</a>
-                <span class="line">|</span>
-                <a href="">资质证照</a>
-                <span class="line">|</span>
-                <a href="">协议规则</a>
-                <span class="line">|</span>
-                <a href="">下载App</a>
-            </div>
-            <div class="personal">
-                <span class="user">
-                    <a href="">
-                        <span>遇见时，是错过，还是相诚</span> &nbsp;&nbsp;
-                <i class="iconfont">&#xe667;</i>
-                </a>
-                <ul>
-                    <li>
-                        <a href="">个人中心</a>
-                    </li>
-                    <li>
-                        <a href="">评价晒单</a>
-                    </li>
-                    <li>
-                        <a href="">我喜欢的</a>
-                    </li>
-                    <li>
-                        <a href="">小米账号</a>
-                    </li>
-                    <li>
-                        <a href="">退出登录</a>
-                    </li>
-                </ul>
-                </span>
-                <span class="line">|</span>
-                <a href=""><span class="message">消息通知</span></a>
-                <span class="line">|</span>
-                <a href=""><span class="order">我的订单</span></a>
-                <div class="shoppingcar">
-                    <a href="">
-                        <i class="iconfont">&#xe501;</i>&nbsp;&nbsp;购物车
-                        <span class="cart">(0)</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <header>
-        <div class="header">
-            <div class="header-logo">
-                <a href="" title="小米官网"></a>
-            </div>
-            <div class="header-nav">
-                <ul class="nav-list">
-                    <li><a href=""><span>全部商品分类</span></a></li>
-                    <li><a href=""><span>小米手机</span></a></li>
-                    <li><a href=""><span>Redmi红米</span></a></li>
-                    <li><a href=""><span>电视</span></a></li>
-                    <li><a href=""><span>笔记本</span></a></li>
-                    <li><a href=""><span>家电</span></a></li>
-                    <li><a href=""><span>路由器</span></a></li>
-                    <li><a href=""><span>智能硬件</span></a></li>
-                    <li><a href=""><span>服务</span></a></li>
-                    <li><a href=""><span>社区</span></a></li>
-                </ul>
-            </div>
-            <div class="header-search">
-                <form action="" class="search-form" method="get" action="">
-                    <input type="search" class="search-text" name="keyword">
-                    <input type="submit" class="search-buttobn iconfont" value="&#xe61c;">
-                </form>
-            </div>
-        </div>
-    </header>
+     <!-- 第一二块 用的是公共模块 -->
+     <%include template/header.ejs %>
+
     <div class="home">
         <a href="">首页</a>
         <span class="sep">></span>
@@ -193,7 +108,7 @@
                 <div class="user">
                     <div class="user-card">
                         <img src="https://account.xiaomi.com/static/img/passport/photo.jpg" alt="遇见时，是错过，还是相诚">
-                        <h2 class="username">遇见时，是错过，还是相诚</h2>
+                        <h2 class="username"><%=username%></h2>
                         <p class="tip">早上好~</p>
                         <a href="PersonalDetails.html" class="link">修改个人信息 ></a>
                     </div>
@@ -205,11 +120,15 @@
                             </li>
                             <li>
                                 绑定手机：
-                                <span class="tel">152******12</span>
+                                <span class="tel"><%=mobile %></span>
                             </li>
                             <li>
                                 邮箱绑定:
+                                <% if(email){ %>
+                                <span class="tel"><% email %></span>
+                                <% }else{ %>
                                 <span class="tel">未绑定</span>
+                                <% } %>
                             </li>
                         </ul>
                     </div>
@@ -348,5 +267,6 @@
 <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
 <script src="js/head.js"></script>
 <script src="js/footer.js"></script>
+<script src="js/PersonalCenter.js"></script>
 
 </html>
