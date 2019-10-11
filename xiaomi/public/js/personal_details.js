@@ -40,12 +40,12 @@ for (var i = 0; i < inputs.length; i++) {
             let email_value = email.value;
             let email_pattern = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
             if (email_pattern.test(email_value) == true) {
-                b_email.innerHTML = "&#xe502";
+                b_email.innerHTML = `<i class="icon-gou"></i>`;
                 b_email.style.color = "#0F0";
                 ensure.removeAttribute("disabled");
                 $(ensure).css({background:'#ff7600',border:'1px solid #ff7600',cursor:'default'})
             } else {
-                b_email.innerHTML = "&#xe504";
+                b_email.innerHTML = `<i class="icon-chahao"></i>`;
                 b_email.style.color = "#F00";
                 ensure.setAttribute("disabled","disabled");
                 $(ensure).css({background:'#aaa',border:'1px solid #aaa',cursor:'not-allowed'})
@@ -59,12 +59,12 @@ for (var i = 0; i < inputs.length; i++) {
             let tel_value = tel.value;
             let tel_pattern = /^1(3|4|5|6|7|8|9)\d{9}$/;
             if (tel_pattern.test(tel_value) == true) {
-                b_tel.innerHTML = "&#xe502";
+                b_tel.innerHTML = `<i class="icon-gou"></i>`;
                 b_tel.style.color = "#0F0";
                 ensure.removeAttribute("disabled");
                 $(ensure).css({background:'#ff7600',border:'1px solid #ff7600',cursor:'default'})
             } else {
-                b_tel.innerHTML = "&#xe504";
+                b_tel.innerHTML = `<i class="icon-chahao"></i>`;
                 b_tel.style.color = "#F00";
                 ensure.setAttribute("disabled","disabled");
                 $(ensure).css({background:'#aaa',border:'1px solid #aaa',cursor:'not-allowed'})
