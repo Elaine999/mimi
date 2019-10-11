@@ -39,22 +39,10 @@ router.post('/personalCenter.do',function(req,res){
     let Nickname=req.body.nickname;
     let address = req.body.address;
     let birdate = req.body.birdate;
-    console.log(req.session.uid,23333333333333333333)
     let sql='update userdetails set Mobile=? , Email=? , Gender=? , nickname=? , Address=? , BirthDate=? where UID=?';
     console.log(Mobile,Email,gender,Nickname,address,birdate);
     db.dbConnect(sql,[Mobile,Email,gender,Nickname,address,birdate,req.session.uid],function(err,data){
-        console.log(data,9999999999999);
         res.send();
     })
-    
-    // db.dbConnect(sql,[req.session.uid],function(err,data){
-    // if(data.length>0){
-    //     Mobile=data[0].Mobile;
-    //     Email=data[0].Email;
-    //     Avatar=data[0].Avatar;
-    //     Nickname=data[0].Nickname;
-    // }
-    // res.render('PersonalCenter.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid,mobile:Mobile,email:Email,avatar:Avatar,nickname:Nickname})        
-    // })
 })
 module.exports = router;

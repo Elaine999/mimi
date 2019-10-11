@@ -6,8 +6,9 @@ var year = "";
 var month = "";
 var day = "";
 var b_email = document.querySelector(".email");
-var b_tel = document.querySelector(".tel")
-console.log(b_tel);
+var b_tel = document.querySelector(".tel");
+var ensure=document.querySelector(".ensure");
+console.log(ensure);
 
 $(details).height($(avatar).height());
 
@@ -41,9 +42,13 @@ for (var i = 0; i < inputs.length; i++) {
             if (email_pattern.test(email_value) == true) {
                 b_email.innerHTML = "&#xe502";
                 b_email.style.color = "#0F0";
+                ensure.setAttribute("disabled","enabled");
+                $(ensure).css({background:'#ff7600',border:'1px solid #ff7600',cursor:'default'})
             } else {
                 b_email.innerHTML = "&#xe504";
                 b_email.style.color = "#F00";
+                ensure.setAttribute("disabled","disabled");
+                $(ensure).css({background:'#aaa',border:'1px solid #aaa',cursor:'not-allowed'})
             }
         }
     }
@@ -56,9 +61,13 @@ for (var i = 0; i < inputs.length; i++) {
             if (tel_pattern.test(tel_value) == true) {
                 b_tel.innerHTML = "&#xe502";
                 b_tel.style.color = "#0F0";
+                ensure.setAttribute("disabled","enabled");
+                $(ensure).css({background:'#ff7600',border:'1px solid #ff7600',cursor:'default'})
             } else {
                 b_tel.innerHTML = "&#xe504";
                 b_tel.style.color = "#F00";
+                ensure.setAttribute("disabled","disabled");
+                $(ensure).css({background:'#aaa',border:'1px solid #aaa',cursor:'not-allowed'})
             }
         }
     }
@@ -194,7 +203,7 @@ $('.ensure').on('click',function(){
         type:'post',
         data:$('#detailsform').serialize(),
         success:function(res){
-            // window.location.href="http://127.0.0.1:3000/PersonalCenter";
+            window.location.href="http://127.0.0.1:3000/PersonalCenter";
         }
     })
 })
