@@ -69,8 +69,6 @@
                 type: 'post',
                 data: $('.formBox').serialize(),
                 success: function (res) {
-                    console.log(res.sta);
-
                     if (res.sta != false) {
                         window.location.href = 'http://127.0.0.1:3000/login.html'
                     }

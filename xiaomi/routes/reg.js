@@ -23,6 +23,8 @@ router.post("/reg.jsp", function (req, res, next) {
     let sql3Arr = [Email]
     // 插入信息表
     let sql4 = "INSERT INTO userdetails (UID,Avatar,Email,nickname) VALUES (?,?,?,?)"
+    // 删除验证码表的所有数据
+    let sql5 ="DELETE  FROM verCode"
     // 查询
     db.dbConnect(sql2, sqlARR2, function (err, data) {
         console.log(data);
@@ -38,17 +40,11 @@ router.post("/reg.jsp", function (req, res, next) {
                     })
                 })
 
-                if (err) {
-                    res.send("注册失败请检查啦啦啦")
-                    console.log(22222222);
-
-                } else {
-                    res.send("注册成功")
-                    console.log(11111111);
-                    
-                }
             })
+            db.dbConnect(sql5, [], function (err, data) {
 
+            })
+            res.send("1")
         } else {
             console.log("注册失败请检查");
             res.send({
