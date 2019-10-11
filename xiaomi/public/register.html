@@ -30,11 +30,24 @@
         <p>简体| 繁体| English |常见问题</p>
         <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
     <script>
         let code = $('.code')
         let eMail = $(".eMail")
+        let setTime=null
         $('.codeBtn').on('click', function () {
+
+            var intime=60
+            setTime= setInterval(function(){
+                        $('.codeBtn').html(`剩余时间${intime}`)
+                        // console.log(intime);
+                        intime--
+                        if(intime==0){
+                        $('.codeBtn').html(`请重新获取`)
+                        clearInterval(setTime)
+                        }
+                    },1000)
+                    
             console.log(111);
             $.ajax({
                 url: '/reg/getcode.php',
@@ -45,7 +58,8 @@
                 },
                 success(res) {
                     data = res
-
+                   
+                    
                 }
             })
         })

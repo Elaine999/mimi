@@ -22,7 +22,7 @@ router.post("/reg.jsp", function (req, res, next) {
     let sql3 = "SELECT * FROM useraccount WHERE email = ?"
     let sql3Arr = [Email]
     // 插入信息表
-    let sql4 = "INSERT INTO userdetails (UID,Avatar,Email) VALUES (?,?,?)"
+    let sql4 = "INSERT INTO userdetails (UID,Avatar,Email,nickname) VALUES (?,?,?,?)"
     // 查询
     db.dbConnect(sql2, sqlARR2, function (err, data) {
         console.log(data);
@@ -32,7 +32,7 @@ router.post("/reg.jsp", function (req, res, next) {
                 console.log(data);
 
                 db.dbConnect(sql3, sql3Arr, function (err, data) {
-                    let sql4Arr = [data[0].uid, "img/user_defult.png", Email]
+                    let sql4Arr = [data[0].uid, "img/user_defult.png", Email,`小米用户${parseInt(Math.random()*8000+1000)}`]
                     db.dbConnect(sql4, sql4Arr, function (err, data) {
 
                     })
