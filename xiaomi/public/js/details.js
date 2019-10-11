@@ -31,6 +31,8 @@ smallpoints.on('click',function(){
 
 })
 //自动播放
+if(imgstatus==1){
+    
     var timeId=setInterval(function(){
         index++;
         if(index>len-1){
@@ -39,6 +41,7 @@ smallpoints.on('click',function(){
         $(swiperWrapperimg[index]).fadeIn('slow').siblings('.swiperWrapper').fadeOut('fast');
         $(smallpoints[index]).addClass('smallShow').siblings().removeClass('smallShow')
     },3000)
+}
 //移入停止！！！
 swiperWrapperimg.mouseover(function(){
     window.clearInterval(timeId);

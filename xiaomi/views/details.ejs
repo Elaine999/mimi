@@ -14,7 +14,12 @@
 <body>
     <script>
     var pid= '<%=data[0].PID%>'
-        
+    if('<%=data[0].img2%>'){
+         imgstatus=1;
+    }
+    else{
+        imgstatus=2;
+    }
         
     </script>
    
@@ -65,15 +70,26 @@
                 <img src="<%=data[0].img5%>" alt="">
 
             </div>
+            <% if(data[0].img2){ %>
             <div class="swiper_button_prev">&lt;</div>
             <div class="swiper_button_next">&gt;</div>
+            <% } %>
             <div class="swiper_pagination">
                 <ul class="swiper_pagination_ul">
+                    
+                    <% if(data[0].img2){ %>
                     <li data-idx="0" class="smallShow"></li>
                     <li data-idx="1"></li>
+                    <% } %>
+                    <% if(data[0].img3){ %>
                     <li data-idx="2"></li>
+                    <% } %>
+                    <% if(data[0].img4){ %>
                     <li data-idx="3"></li>
+                    <% } %>
+                    <% if(data[0].img5){ %>
                     <li data-idx="4"></li>
+                    <% } %>
                 </ul>
             </div>
 
@@ -184,8 +200,8 @@
                     <button class="buy">加入购物车</button>
                     <button class="like"><a href="javascript:void(0)"><i>❤</i>喜欢</a></button>
                 <%}else{%>
-                    <button class="readylog"><a href="login">请先登录再加入购物车</a></button>
-                    <button class="like"><a href="login">❤喜欢</a></button>
+                    <button class="readylog"><a href="login.html">请先登录再加入购物车</a></button>
+                    <button class="like"><a href="login.html">❤喜欢</a></button>
                 
                 <%}%>
                 
