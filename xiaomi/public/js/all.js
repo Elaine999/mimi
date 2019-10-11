@@ -1,5 +1,7 @@
     let phoneBox = document.querySelector(".phoneBox")
     let payBox = document.querySelector(".payBox")
+    let carTips = document.querySelector(".carTips")
+
     let nodestr = `<div class="combox">
                     <div class="comtext">
                         <textarea name="comcontent" id="comcontent" placeholder="写点什么吧！" cols="30" rows="10"></textarea>
@@ -83,7 +85,9 @@
                 // console.log(res[i]);
 
                 if (res[i].uid == userId) {
-
+                    if (document.querySelector(".carTips")) {
+                        phoneBox.removeChild(carTips)
+                    }
                     sum = parseInt(sum) + parseInt(res[i].ppri)
                     phoneBox.innerHTML += `
                 <ul>
