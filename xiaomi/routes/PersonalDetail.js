@@ -4,16 +4,15 @@ var db=require('./../utils/db.js');
 
 router.post('/345',function(req,res){
     let baseimg=req.body.img;
-    // console.log(baseimg,99999);
-    let sql='UPDATE userdetails SET Avatar=? WHERE UID=1'
-    db.dbConnect(sql,[baseimg],function(error,data){
-        
+    console.log(baseimg,99999);
+    let sql='UPDATE userdetails SET Avatar=? WHERE UID=?'
+    db.dbConnect(sql,[baseimg,req.session.uid],function(error,data){
         res.send(data);
     })
 })
 
 router.get('/',function(req,res){
-    let sql='select Mobile,Email,Avatar from userdetails where uid= ?';
+    let sql='select Mobile,Email,Avatar,Gender,Nickname from userdetails where uid= ?';
     let Mobile=null;
     let Email=null;
     let Avatar=null;

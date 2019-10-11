@@ -176,14 +176,13 @@ $('.tip_btns .a2').on('click',function(){
             }
         }
         
-        
         $('#confirm').on('click',function(){
             $.ajax({
                 type:'post',
                 url:'PersonalDetail/345',
                 data:{img:imgbase},
                 success:function(res){
-                    //  console.log(res);
+                    $('.avatar img').attr({src:imgbase})
                 }
             })
             $('.popup_mask').hide();

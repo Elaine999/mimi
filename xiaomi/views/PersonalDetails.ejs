@@ -18,82 +18,86 @@
         </div>
         <div class="info">
             <div class="avatar">
-                <img src="https://account.xiaomi.com/static/img/passport/photo.jpg" alt="">
+                <img src=<%=avatar%> alt="">
                 <h2>SHR：<%=nickname%></h2>
                 <span>ADDRESS：<%=address%></span>
                 <span>EMAIL：<%=email%></span>
                 <span>TEL：<%=mobile%></span>
                 <span class="id">ID：<%=uid%></span>
             </div>
-            <div class="details">
-                <ul>
-                    <li><span>昵称：</span><input type="text" placeholder=<%=nickname%>>
-                    </li>
-                    <li><span>性别：</span>
-                        <%if(gender){ %>
-                        <input type="radio" name="gender" id="male" checked>
-                        <label for="male">男</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="radio" name="gender" id="female">
-                        <label for="female">女</label>
-                        <%}else{ %>
-                        <input type="radio" name="gender" id="male">
-                        <label for="male">男</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="radio" name="gender" id="female" checked>
-                        <label for="female">女</label>
-                        <%}%>
-                    </li>
-                    <li><span>生日：</span>
-                        <select name="year" id=""></select>
-                        <i>年</i>
-                        <select name="year" id="">
-                        </select>
-                        <i>月</i>
-                        <select name="" id="">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                        </select>
-                        <i>日</i></li>
-                    <li><span>邮箱：</span><input type="email" placeholder=<%=email%>>&nbsp;&nbsp;<b class="email iconfont"></b></li>
-                    <li><span>联系电话：</span><input type="tel" placeholder=<%=mobile%>>&nbsp;&nbsp;<b class="tel iconfont"></b></li>
-                    <li><span>地址：</span><input type="text" name="" id="" placeholder=<%=address%>></li>
-                    <li>
-                        <input type="submit" class="ensure" value="确定"></input>
-                        <input type="reset" class="reset" value="重置"></input>
-                        <input type="button" class="cancel" value="取消"></input>
-                    </li>
-                </ul>
-            </div>
+            <form action="" method="post">
+                <div class="details">
+                    <ul>
+                        <li><span>昵称：</span><input type="text" placeholder=<%=nickname%>>
+                        </li>
+                        <li><span>性别：</span>
+                            <%if(gender){ %>
+                            <input type="radio" name="gender" id="male" checked>
+                            <label for="male">男</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">女</label>
+                            <%}else{ %>
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">男</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="gender" id="female" checked>
+                            <label for="female">女</label>
+                            <%}%>
+                                </li>
+                                <li><span>生日：</span>
+                                    <select name="year" id=""></select>
+                                    <i>年</i>
+                                    <select name="year" id="">
+                                    </select>
+                                    <i>月</i>
+                                    <select name="" id="">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                    <i>日</i></li>
+                                <li><span>邮箱：</span><input type="email" placeholder=<%=email%>>&nbsp;&nbsp;<b
+                                class="email iconfont"></b></li>
+                        <li><span>联系电话：</span><input type="tel" placeholder=<%=mobile%>>&nbsp;&nbsp;<b
+                                class="tel iconfont"></b></li>
+                        <li><span>地址：</span><input type="text" name="" id="" placeholder=<%=address%>></li>
+                        <li>
+                            <input type="submit" class="ensure" value="确定"></input>
+                            <input type="reset" class="reset" value="重置"></input>
+                            <input type="button" class="cancel" value="取消"></input>
+                        </li>
+                    </ul>
+                </div>
+            </form>
         </div>
     </div>
 
