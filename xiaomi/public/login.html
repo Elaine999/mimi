@@ -50,7 +50,11 @@
         data: $('#getinfoform').serialize(),
         success: function (res) {
           if (res.stateCode) {
-            window.location.href = res.url
+            if (res.url) {
+              window.location.href = res.url
+            } else {
+              window.location.href = 'http://127.0.0.1/'
+            }
           } else {
             let prizeBox = document.createElement("div")
             $(prizeBox).css({
@@ -76,6 +80,20 @@
         }
       })
     })
+    // window.onload = function () {
+    //   $.ajax({
+    //     url: 'com/insert',
+    //     type: 'post',
+    //     data: {
+    //       pid: 17,
+    //       uid: 2,
+    //       content: '我来自重庆'
+    //     },
+    //     success:function(res){
+    //       console.log(res);
+    //     }
+    //   })
+    // }
   </script>
 </body>
 

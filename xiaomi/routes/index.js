@@ -9,11 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  // console.log(req.getHeader("referer"));
-  console.log(req.headers);
-  console.log(req.headers.referer,000000);
   req.session.url=req.headers.referer
-  console.log(req.session.url,4444);
   res.redirect('/login.html');
 })
 
