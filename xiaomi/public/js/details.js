@@ -32,7 +32,6 @@ smallpoints.on('click',function(){
 })
 //自动播放
 if(imgstatus==1){
-    
     var timeId=setInterval(function(){
         index++;
         if(index>len-1){
