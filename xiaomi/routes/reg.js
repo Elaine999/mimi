@@ -22,7 +22,9 @@ router.post("/reg.jsp", function (req, res, next) {
     let sql3 = "SELECT * FROM useraccount WHERE email = ?"
     let sql3Arr = [Email]
     // 插入信息表
-    let sql4 = "INSERT INTO userdetails (UID,Avatar,Email) VALUES (?,?,?)"
+    let sql4 = "INSERT INTO userdetails (UID,Avatar,Email,nickname) VALUES (?,?,?,?)"
+    // 删除验证码表的所有数据
+    let sql5 ="DELETE  FROM verCode"
     // 查询
     db.dbConnect(sql2, sqlARR2, function (err, data) {
         console.log(data);
@@ -32,23 +34,17 @@ router.post("/reg.jsp", function (req, res, next) {
                 console.log(data);
 
                 db.dbConnect(sql3, sql3Arr, function (err, data) {
-                    let sql4Arr = [data[0].uid, "img/user_defult.png", Email]
+                    let sql4Arr = [data[0].uid, "img/user_defult.png", Email,`小米用户${parseInt(Math.random()*8000+1000)}`]
                     db.dbConnect(sql4, sql4Arr, function (err, data) {
 
                     })
                 })
 
-                if (err) {
-                    res.send("注册失败请检查啦啦啦")
-                    console.log(22222222);
-
-                } else {
-                    res.send("注册成功")
-                    console.log(11111111);
-                    
-                }
             })
+            db.dbConnect(sql5, [], function (err, data) {
 
+            })
+            res.send("1")
         } else {
             console.log("注册失败请检查");
             res.send({

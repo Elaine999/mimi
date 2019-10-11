@@ -20,14 +20,10 @@ router.get('/all.php', function (req, res, next) {
 router.get('/all.jsp', function (req, res, next) {
   let cids = req.query.cid
   let sqlarr = [cids]
-  console.log(cids);
-
-  let sql = 'select * FROM cartable where Cid=? ';
+  let sql = 'select * FROM indtable where Cid=? ';
 
   db.dbConnect(sql, sqlarr, function (err, data) {
-    console.log(data);
-    res.send(data);
-
+    res.send({data});
   })
 })
 
