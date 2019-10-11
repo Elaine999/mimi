@@ -9,11 +9,11 @@
                         <button id="sub">发布</button>
                     </div>
                 </div>`
-
+    let compid = null;
+    let comuid = null;
     $("body").click(function (e) {
         if (e.target.className == "del") {
             let CiD = e.target.dataset.cid
-            console.log(e.target);
             $(nodestr).appendTo($('body'))
             $.ajax({
                 url: "/all/all.jsp",
@@ -23,11 +23,55 @@
                 },
                 success: function (res) {
                     console.log(res);
+                    compid = res.data[0].pid;
+                    comuid = res.data[0].uid;
+                    console.log(compid, comuid);
                 }
             })
         }
-
-
+        if (e.target.id == 'cancel') {
+            $('.combox').remove()
+        }
+        if (e.target.id == 'sub') {
+            console.log($('#comcontent').val());
+            $.ajax({
+                url: '/com/insert',
+                type: 'post',
+                data: {
+                    pid: compid,
+                    uid: comuid,
+                    content: $('#comcontent').val()
+                },
+                success: function (res) {
+                    console.log(res.state);
+                    if (res.state) {
+                        let prizeBox = document.createElement("div")
+                        $(prizeBox).css({
+                            width: " 300px",
+                            height: "100px",
+                            background: "rgba(101, 101, 102, 0.4)",
+                            color: "#fff",
+                            fontSize: "20px",
+                            textAlign: "center",
+                            lineHeight: "100px",
+                            position: "fixed",
+                            top: "50%",
+                            left: "50%",
+                            marginLeft: '-150px',
+                            marginTop: '-50px'
+                        })
+                        prizeBox.innerText = `发布成功！`
+                        document.body.appendChild(prizeBox)
+                        prizeBox.onclick = function () {
+                            document.body.removeChild(prizeBox)
+                        }
+                        setTimeout(function () {
+                            $('.combox').remove()
+                        }, 700)
+                    }
+                }
+            })
+        }
     })
     $.ajax({
         url: "/all/all.php",
