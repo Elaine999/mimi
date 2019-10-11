@@ -38,9 +38,7 @@ router.post('/insert',function(req,res){
     let content = req.body.content;
     let sql = `INSERT INTO comtable(pid,uid,content,comdate) VALUES(?,?,?,NOW())`
     let sqlArr = [pid,uid,content]
-    console.log(1241251);
     db.dbConnect(sql,sqlArr,function(err,data){
-        console.log(1231525235);
         if (err) {
             res.send({state:false,mas:'服务器错误'})
         }
