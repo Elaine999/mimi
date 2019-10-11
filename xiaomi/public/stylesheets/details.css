@@ -362,7 +362,7 @@ a{
     color: #fff;
     display: block;
 }
-.btn-wrap .buy{
+.btn-wrap .buy,.readylog{
     width: 298px;
     background-color: #ff6700;
     border: 1px solid #ff6700;
@@ -371,6 +371,12 @@ a{
 }
 .btn-wrap .buy:hover{
     background-color: rgb(242,88,7);
+}
+.btn-wrap .readylog:hover{
+    background-color: rgb(242,88,7);
+}
+.btn-wrap .redheart{
+    color: #ff6700;
 }
 .btn-wrap .buy a:hover{
     background-color: rgb(242,88,7);

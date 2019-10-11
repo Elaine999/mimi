@@ -112,3 +112,7 @@ $('.buy').on('click',function(){
         }
     })
 })
+//喜欢的 点击事件
+$('.like').on('click',function(){
+    $(this).find('i').toggleClass('redheart')
+})
