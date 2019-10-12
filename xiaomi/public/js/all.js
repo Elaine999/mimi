@@ -84,7 +84,7 @@
                     phoneBox.innerHTML += `
                 <ul>
                 <li>&nbsp;</li>
-                <li><img style="height: 80px;width: 80px" src="${res[i].pimg}"></li>
+                <li><a href="/details?pid=${res[i].pid}"><img style="height: 80px;width: 80px" src="${res[i].pimg}"></a></li>
                 <li> ${res[i].pname}（${res[i].vers}） </li>
                 <li> ${res[i].ppri}元</li>
                 <li class="inputBoxs">

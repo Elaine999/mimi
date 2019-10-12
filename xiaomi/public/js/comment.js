@@ -1,5 +1,4 @@
 
-window.onload = function () {
     $.ajax({
         url: '/com/search',
         type: 'get',
@@ -33,4 +32,3 @@ window.onload = function () {
             $(str).appendTo($('.review'));
         }
     })
-}
