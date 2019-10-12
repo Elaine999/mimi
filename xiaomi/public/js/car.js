@@ -76,7 +76,7 @@ $.ajax({
                 phoneBox.innerHTML += `
                 <ul>
                 <li>&nbsp;</li>
-                <li><img style="height: 80px;width: 80px" src="${res[i].Pimg}"></li>
+                <li><a href="/details?pid=${res[i].Pid}"><img style="height: 80px;width: 80px" src="${res[i].Pimg}"></a></li>
                 <li> ${res[i].Pname}（${res[i].Vers}） </li>
                 <li> ${res[i].Ppri}元</li>
                 <li class="inputBoxs">
