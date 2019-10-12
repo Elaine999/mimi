@@ -45,6 +45,6 @@ function getlist(kwd) {
     })
 }
 
-window.onload = function () {
+// window.onload = function () {
     getlist(keyword);
-}
+// }
