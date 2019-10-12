@@ -183,13 +183,12 @@ div.base div.info div.details ul li:last-child .reset {
 div.base div.info div.details ul li:last-child .cancel {
   
 }
+.cancel1{
+  display:inline-block;
+}
 
 
 /* 修改个人资料 */
-* {
-  padding: 0;
-  margin: 0;
-}
 
 
 .popup_mask{

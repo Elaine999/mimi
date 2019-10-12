@@ -8,7 +8,6 @@ var day = "";
 var b_email = document.querySelector(".email");
 var b_tel = document.querySelector(".tel");
 var ensure=document.querySelector(".ensure");
-console.log(ensure);
 
 $(details).height($(avatar).height());
 
@@ -18,19 +17,6 @@ for (let i = 1900; i <= new Date().getFullYear(); i++) {
 for (let i = 1; i <= 12; i++) {
     month += `<option value="${i}">${i}</option>`;
 }
-// selects[0].innerHTML = year;
-// selects[1].innerHTML = month;
-// selects[0].onchange = function () {
-//     let year = event.target.value;
-//     selects[1].onchange = function () {
-//         let month = event.target.value;
-//         let date = new Date(year, month, 0).getDate();
-//         for (var i = 1; i <= date; i++) {
-//             day += `<option value="${i}">${i}</option>`;
-//         }
-//         selects[2].innerHTML = day;
-//     }
-// }
 
 for (var i = 0; i < inputs.length; i++) {
     let email = null;
@@ -98,9 +84,6 @@ var box = document.querySelector('.box')
 var small = document.querySelector('#small')
 var big = document.querySelector('#big')
 
-var img1 = $('#img1')
-var img2 = $('#img2')
-var img3 = $('#img3')
 var background = $('.background')
 var gray = $('.gray')
 var file = null;
@@ -176,9 +159,6 @@ fileInput.onchange = function (e) {
                 positionY = parseInt(imgBox.css('backgroundPositionY'))
                 drewCanvas()
                 imgbase = canvasNode.toDataURL()
-                img1.attr('src', canvasNode.toDataURL())
-                img2.attr('src', canvasNode.toDataURL())
-                img3.attr('src', canvasNode.toDataURL())
                 box.onmousemove = null;
             }
         }

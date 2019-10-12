@@ -11,7 +11,7 @@ router.post('/345',function(req,res){
 })
 
 router.get('/',function(req,res){
-    if(req.session.loginState){
+    // if(req.session.loginState){
         let sql='select Mobile,Email,Avatar,Gender,Nickname from userdetails where uid= ?';
         let Mobile=null;
         let Email=null;
@@ -30,9 +30,9 @@ router.get('/',function(req,res){
         }
         res.render('PersonalDetails.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid,mobile:Mobile,email:Email,avatar:Avatar,address:Address,gender:Gender,nickname:Nickname})        
         })
-    }else{
-        res.render('index.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
-    }
+    // }else{
+    //     res.render('index.ejs',{loginState:req.session.loginState,username:req.session.username,uid:req.session.uid})
+    // }
 })
 
 
@@ -44,9 +44,9 @@ router.post('/personalCenter.do',function(req,res){
     let address = req.body.address;
     let birdate = req.body.birdate;
     let sql='update userdetails set Mobile=? , Email=? , Gender=? , nickname=? , Address=? , BirthDate=? where UID=?';
-    console.log(Mobile,Email,gender,Nickname,address,birdate);
     db.dbConnect(sql,[Mobile,Email,gender,Nickname,address,birdate,req.session.uid],function(err,data){
         res.send();
     })
 })
+
 module.exports = router;

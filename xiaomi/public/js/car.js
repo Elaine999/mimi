@@ -1,6 +1,7 @@
 let phoneBox = document.querySelector(".phoneBox")
 let payBox = document.querySelector(".payBox")
 let carTips = document.querySelector(".carTips")
+let cart_data2 = document.querySelector(".cart_data2")
 
 $("body").click(function (e) {
     if (e.target.className == "del") {
@@ -15,7 +16,6 @@ $("body").click(function (e) {
             },
             success: function (res) {
                 window.location.href = 'http://127.0.0.1:3000/car'
-                console.log(res);
             }
         })
     }
@@ -66,15 +66,12 @@ $.ajax({
         ruid: userId
     },
     success: function (res) {
-        // console.log(res[0]);
         let sum = 0
         for (var i = 0; i < res.length; i++) {
-            // console.log(res[i]);
-
             if (res[i].Uid == userId) {
-                if(document.querySelector(".carTips")){
+                if (document.querySelector(".carTips")) {
                     phoneBox.removeChild(carTips)
-            }
+                }
                 sum = parseInt(sum) + parseInt(res[i].Ppri)
                 phoneBox.innerHTML += `
                 <ul>
@@ -92,14 +89,16 @@ $.ajax({
             </ul>
                 `
             }
-            payBox.innerHTML = `
-            <p>共${res.length}件商品，已选择${res.length}件</p>
-            <span>合计<b>${sum}</b>元</span>
-            <div class="right">
-            去结算
+            cart_data2.innerHTML = `
+            <div class="payBox">
+                <p>共${res.length}件商品，已选择${res.length}件</p>
+                <span>合计<b>${sum}</b>元</span>
+                <div class="right">
+                去结算
+                </div>
             </div>
+            
             `
         }
     }
-
 })

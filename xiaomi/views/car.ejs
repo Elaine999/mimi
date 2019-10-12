@@ -13,7 +13,7 @@
 </head>
 
 <body>
-        <%include template/header.ejs %>
+    <%include template/header.ejs %>
 
     <div class="cart_content">
 
@@ -30,32 +30,23 @@
                 </ul>
             </div>
             <div class="phoneBox">
-                    <div class="carTips">
-                        <p class="carTipsP">您的购物车还是空的！</p> 
-                            <a class="carTo" href="/">马上去购物</a>
-                    </div>
+                <div class="carTips">
+                    <p class="carTipsP">您的购物车还是空的！</p>
+                    <a class="carTo" href="/">马上去购物</a>
+                </div>
             </div>
-            <div class="payBox">
-              
-            </div>
+            <div class="cart_data2"></div>
         </div>
     </div>
-
-        <!-- <h2>———————————————为您推荐———————————————</h2>
-        <div>
-            <ul class="cart_shop">
-
-            </ul>
-        </div> -->
-        <!-- </div> -->
-        <%include template/footer.ejs %>
-        <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
-        <script>
-                var userId="<%= uid %>"
-            </script>
-        <script src="js/car.js"></script>
+    <%include template/footer.ejs %>
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script>
+        var userId = "<%= uid %>"
+    </script>
+    <script src="js/car.js"></script>
     <script src="js/logout.js"></script>
-        
+    <script src="js/head.js"></script>
+
 </body>
 
 </html>
